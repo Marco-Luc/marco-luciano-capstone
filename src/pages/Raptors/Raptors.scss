@@ -1,0 +1,70 @@
+.main-section {
+  background-color: black;
+  padding: 1rem 1rem;
+  &__header {
+    color: white;
+  }
+}
+
+.card-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card-container {
+  perspective: 62.5rem;
+  padding: 1rem 0.25rem;
+}
+
+.card {
+  width: 17.75rem;
+  height: 25rem;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  &:hover {
+    transform: rotateY(180deg);
+  }
+  &__front,
+  &__back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 1.875rem;
+    backface-visibility: hidden;
+  }
+  &__front {
+    background-color: #b60a0a;
+    z-index: 2;
+  }
+  &__back {
+    background-color: #333;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  &__front-description {
+    text-align: center;
+  }
+  &__title {
+    text-align: center;
+    padding-top: 1rem;
+  }
+  &__image {
+    display: block;
+    margin: 1.25rem auto;
+    width: 12.5rem;
+    height: 12.5rem;
+    object-fit: cover;
+    border: rgb(0, 0, 0) solid 0.25rem;
+    border-radius: 1.875rem;
+  }
+  &__stats {
+    list-style: none;
+    margin: 1.25rem 0;
+    padding: 0;
+  }
+  &__stats-stat {
+    margin-bottom: 10px;
+  }
+}
