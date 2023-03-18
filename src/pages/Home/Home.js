@@ -17,11 +17,11 @@ import jazzLogo from "../../assets/Logos/TeamLogosSVG/SVG-jazz.svg";
 import kingsLogo from "../../assets/Logos/TeamLogosSVG/SVG-kings.svg";
 import knicksLogo from "../../assets/Logos/TeamLogosSVG/SVG-knicks.svg";
 import lakersLogo from "../../assets/Logos/TeamLogosSVG/SVG-lakers.svg";
-// import magicLogo from "!file-loader!../../assets/Logos/TeamLogosSVG/SVG-magic.svg";
+import magicLogo from "../../assets/Logos/TeamLogosSVG/SVG-magic.svg";
 import mavericksLogo from "../../assets/Logos/TeamLogosSVG/SVG-mavericks.svg";
-// import netsLogo from "!file-loader!../../assets/Logos/TeamLogosSVG/SVG-nets.svg";
+import netsLogo from "../../assets/Logos/TeamLogosSVG/SVG-nets.svg";
 import nuggetsLogo from "../../assets/Logos/TeamLogosSVG/SVG-nuggets.svg";
-// import pacersLogo from "!file-loader!../../assets/Logos/TeamLogosSVG/SVG-pacers.svg";
+import pacersLogo from "../../assets/Logos/TeamLogosSVG/SVG-pacers.svg";
 import pelicansLogo from "../../assets/Logos/TeamLogosSVG/SVG-pelicans.svg";
 import pistonsLogo from "../../assets/Logos/TeamLogosSVG/SVG-pistons.svg";
 import raptorsLogo from "../../assets/Logos/TeamLogosSVG/SVG-raptors.svg";
@@ -114,7 +114,7 @@ function Home() {
         />
         <img
           className="logos-section__logo"
-          src={lakersLogo}
+          src={magicLogo}
           alt="Orlando Magic Logo"
         />
         <img
@@ -124,7 +124,7 @@ function Home() {
         />
         <img
           className="logos-section__logo"
-          src={mavericksLogo}
+          src={netsLogo}
           alt="Brooklyn Nets Logo"
         />
         <img
@@ -134,7 +134,7 @@ function Home() {
         />
         <img
           className="logos-section__logo"
-          src={nuggetsLogo}
+          src={pacersLogo}
           alt="Indiana Pacers Logo"
         />
         <img

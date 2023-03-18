@@ -1,3 +1,5 @@
+@use "../../styles/partials/variables" as *;
+
 .header {
   background-color: rgba(12, 4, 237, 0.878);
   width: 100%;
@@ -9,6 +11,9 @@
   &__title {
     font-size: 2rem;
     padding: 1rem;
+    font-family: $mainFont;
+    color: white;
+    font-weight: 300;
   }
   &__nba-logo {
     padding: 1rem 1rem 1rem 1rem;

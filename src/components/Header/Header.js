@@ -9,7 +9,7 @@ function Header() {
         <NavLink to="/">
           <img className="header__nba-logo" src={nbaLogoSvg} alt="NBA Logo" />
         </NavLink>
-        <h1 className="header__title">Marco Luciano Capstone Project</h1>
+        <h1 className="header__title">NBA My Starting Five</h1>
       </div>
     </section>
   );

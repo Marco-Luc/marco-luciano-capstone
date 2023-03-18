@@ -4,13 +4,27 @@ import garyTrentJr from "../../assets/Images/RaptorsPlayers/gtj.jpg";
 import scottieBarnes from "../../assets/Images/RaptorsPlayers/scottie.jpg";
 import ogAnunoby from "../../assets/Images/RaptorsPlayers/og.jpg";
 import pascalSiakam from "../../assets/Images/RaptorsPlayers/siakam.jpg";
-import jakobPoeltl from "../../assets/Images/RaptorsPlayers/poeltl.jpg";
+// import jakobPoeltl from "../../assets/Images/RaptorsPlayers/poeltl.jpg";
 import kawhiClip from "../../assets/Videos/RaptorsVideos/KawhiClip.mp4";
 
 function Raptors() {
+  // const cardFlip = document.querySelectorAll(".card");
+
+  // cardFlip.forEach((card) => {
+  //   let individualCard = card;
+
+  //   individualCard.addEventListener("click", (event) => {
+  //     const activeCard = document.querySelector(".cards__card-flip--active");
+  //     if (activeCard !== null) {
+  //       activeCard.classList.remove(".cards__card-flip--active");
+  //     }
+  //     individualCard.classList.add(".cards__card-flip--active");
+  //   });
+  // });
+
   return (
     <section className="main-section">
-      <h2 className="main-section__header">Raptors</h2>
+      <h2 className="main-section__header">Toronto Raptors</h2>
       <div className="card-section">
         <div className="card-container">
           <div className="card">
@@ -25,18 +39,6 @@ function Raptors() {
               <p className="card__front__quote">"Mr. Bet On Yourself"</p>
             </div>
             <div className="card__back">
-              <h2 className="card__back__title">Fred VanVleet</h2>
-              <video className="card__back__video" poster controls>
-                <source src={kawhiClip}></source>
-              </video>
-              <p className="card__back__bio">
-                Fred VanVleet is a well-rounded basketball player with a
-                versatile skill set. He excels at shooting from beyond the arc,
-                playing tough defense, and creating opportunities for himself
-                and his teammates. His strong work ethic and leadership skills
-                make him a valuable asset to any team, and he was a key player
-                in the Toronto Raptors' championship run in 2019.
-              </p>
               <h2 className="card__stats-title">Stats</h2>
               <div className="card__stats-container">
                 <ul className="card__stats">
@@ -46,6 +48,18 @@ function Raptors() {
                   <li className="card__stats-stat">SPG: 1</li>
                   <li className="card__stats-stat">BPG: 2</li>
                 </ul>
+                <video className="card__back__video" poster controls>
+                  <source src={kawhiClip}></source>
+                </video>
+                <p className="card__back__bio">
+                  Fred VanVleet is a well-rounded basketball player with a
+                  versatile skill set. He excels at shooting from beyond the
+                  arc, playing tough defense, and creating opportunities for
+                  himself and his teammates. His strong work ethic and
+                  leadership skills make him a valuable asset to any team, and
+                  he was a key player in the Toronto Raptors' championship run
+                  in 2019.
+                </p>
               </div>
             </div>
           </div>
@@ -63,7 +77,16 @@ function Raptors() {
               <p className="card__front__quote">"Shaq of the MAC"</p>
             </div>
             <div className="card__back">
-              <h2 className="card__back__title">Gary Trent Jr.</h2>
+              <h2 className="card__stats-title">Stats</h2>
+              <div className="card__stats-container">
+                <ul className="card__stats">
+                  <li className="card__stats-stat">PPG: 25.3</li>
+                  <li className="card__stats-stat">APG: 7.8</li>
+                  <li className="card__stats-stat">RPG: 7.7</li>
+                  <li className="card__stats-stat">SPG: 1</li>
+                  <li className="card__stats-stat">BPG: 2</li>
+                </ul>
+              </div>
               <video className="card__back__video" poster controls>
                 <source src={kawhiClip}></source>
               </video>
@@ -75,16 +98,6 @@ function Raptors() {
                 helped him develop into a valuable player on both ends of the
                 court.
               </p>
-              <h2 className="card__stats-title">Stats</h2>
-              <div className="card__stats-container">
-                <ul className="card__stats">
-                  <li className="card__stats-stat">PPG: 25.3</li>
-                  <li className="card__stats-stat">APG: 7.8</li>
-                  <li className="card__stats-stat">RPG: 7.7</li>
-                  <li className="card__stats-stat">SPG: 1</li>
-                  <li className="card__stats-stat">BPG: 2</li>
-                </ul>
-              </div>
             </div>
           </div>
         </div>
@@ -103,7 +116,16 @@ function Raptors() {
               <p className="card__front__quote">"Be great 4"</p>
             </div>
             <div className="card__back">
-              <h2 className="card__back__title">Scottie Barnes</h2>
+              <h2 className="card__stats-title">Stats</h2>
+              <div className="card__stats-container">
+                <ul className="card__stats">
+                  <li className="card__stats-stat">PPG: 25.3</li>
+                  <li className="card__stats-stat">APG: 7.8</li>
+                  <li className="card__stats-stat">RPG: 7.7</li>
+                  <li className="card__stats-stat">SPG: 1</li>
+                  <li className="card__stats-stat">BPG: 2</li>
+                </ul>
+              </div>
               <video className="card__back__video" poster controls>
                 <source src={kawhiClip}></source>
               </video>
@@ -116,16 +138,6 @@ function Raptors() {
                 2021/2022 season. This recognition highlights his potential to
                 become a top player in the league.
               </p>
-              <h2 className="card__stats-title">Stats</h2>
-              <div className="card__stats-container">
-                <ul className="card__stats">
-                  <li className="card__stats-stat">PPG: 25.3</li>
-                  <li className="card__stats-stat">APG: 7.8</li>
-                  <li className="card__stats-stat">RPG: 7.7</li>
-                  <li className="card__stats-stat">SPG: 1</li>
-                  <li className="card__stats-stat">BPG: 2</li>
-                </ul>
-              </div>
             </div>
           </div>
         </div>
@@ -138,12 +150,20 @@ function Raptors() {
                 Forward, Toronto Raptors
               </p>
               <p className="card__front__quote">
-                On his Game 3 Buzzer Beater in the 2020 playoffs: "I expected to
-                make it. I don’t shoot trying to miss."
+                "I don’t shoot trying to miss."
               </p>
             </div>
             <div className="card__back">
-              <h2 className="card__back__title">OG Anunoby</h2>
+              <h2 className="card__stats-title">Stats</h2>
+              <div className="card__stats-container">
+                <ul className="card__stats">
+                  <li className="card__stats-stat">PPG: 25.3</li>
+                  <li className="card__stats-stat">APG: 7.8</li>
+                  <li className="card__stats-stat">RPG: 7.7</li>
+                  <li className="card__stats-stat">SPG: 1</li>
+                  <li className="card__stats-stat">BPG: 2</li>
+                </ul>
+              </div>
               <video className="card__back__video" poster controls>
                 <source src={kawhiClip}></source>
               </video>
@@ -155,16 +175,6 @@ function Raptors() {
                 to his success on both ends of the court, making him a valuable
                 player for the Toronto Raptors.
               </p>
-              <h2 className="card__stats-title">Stats</h2>
-              <div className="card__stats-container">
-                <ul className="card__stats">
-                  <li className="card__stats-stat">PPG: 25.3</li>
-                  <li className="card__stats-stat">APG: 7.8</li>
-                  <li className="card__stats-stat">RPG: 7.7</li>
-                  <li className="card__stats-stat">SPG: 1</li>
-                  <li className="card__stats-stat">BPG: 2</li>
-                </ul>
-              </div>
             </div>
           </div>
         </div>
@@ -183,7 +193,16 @@ function Raptors() {
               <p className="card__front__quote">"Spicy P"</p>
             </div>
             <div className="card__back">
-              <h2 className="card__back__title">Pascal Siakam</h2>
+              <h2 className="card__stats-title">Stats</h2>
+              <div className="card__stats-container">
+                <ul className="card__stats">
+                  <li className="card__stats-stat">PPG: 25.3</li>
+                  <li className="card__stats-stat">APG: 7.8</li>
+                  <li className="card__stats-stat">RPG: 7.7</li>
+                  <li className="card__stats-stat">SPG: 1</li>
+                  <li className="card__stats-stat">BPG: 2</li>
+                </ul>
+              </div>
               <video className="card__back__video" poster controls>
                 <source src={kawhiClip}></source>
               </video>
@@ -195,20 +214,10 @@ function Raptors() {
                 contributions to the Toronto Raptors have made him a valuable
                 player in the league.
               </p>
-              <h2 className="card__stats-title">Stats</h2>
-              <div className="card__stats-container">
-                <ul className="card__stats">
-                  <li className="card__stats-stat">PPG: 25.3</li>
-                  <li className="card__stats-stat">APG: 7.8</li>
-                  <li className="card__stats-stat">RPG: 7.7</li>
-                  <li className="card__stats-stat">SPG: 1</li>
-                  <li className="card__stats-stat">BPG: 2</li>
-                </ul>
-              </div>
             </div>
           </div>
         </div>
-        <div className="card-container">
+        {/* <div className="card-container">
           <div className="card">
             <div className="card__front">
               <h2 className="card__front__title">Jakob Poeltl</h2>
@@ -223,7 +232,16 @@ function Raptors() {
               <p className="card__front__quote">"The Austrian Hammer"</p>
             </div>
             <div className="card__back">
-              <h2 className="card__back__title">Jakob Poeltl</h2>
+              <h2 className="card__stats-title">Stats</h2>
+              <div className="card__stats-container">
+                <ul className="card__stats">
+                  <li className="card__stats-stat">PPG: 25.3</li>
+                  <li className="card__stats-stat">APG: 7.8</li>
+                  <li className="card__stats-stat">RPG: 7.7</li>
+                  <li className="card__stats-stat">SPG: 1</li>
+                  <li className="card__stats-stat">BPG: 2</li>
+                </ul>
+              </div>
               <video className="card__back__video" poster controls>
                 <source src={kawhiClip}></source>
               </video>
@@ -235,19 +253,9 @@ function Raptors() {
                 work ethic, and team-oriented mindset make him a valuable asset
                 to any team.
               </p>
-              <h2 className="card__stats-title">Stats</h2>
-              <div className="card__stats-container">
-                <ul className="card__stats">
-                  <li className="card__stats-stat">PPG: 25.3</li>
-                  <li className="card__stats-stat">APG: 7.8</li>
-                  <li className="card__stats-stat">RPG: 7.7</li>
-                  <li className="card__stats-stat">SPG: 1</li>
-                  <li className="card__stats-stat">BPG: 2</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+            </div> */}
+        {/* </div>
+        </div> */}
       </div>
     </section>
   );
