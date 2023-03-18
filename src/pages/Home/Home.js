@@ -1,4 +1,5 @@
 import "./Home.scss";
+import { NavLink } from "react-router-dom";
 
 // import kawhiClip from "../../assets/Videos/RaptorsVideos/KawhiClip.mp4";
 import sixersLogo from "../../assets/Logos/TeamLogosSVG/SVG-76ers.svg";
@@ -146,11 +147,13 @@ function Home() {
           src={pistonsLogo}
           alt="Detroit Pistons Logo"
         />
-        <img
-          className="logos-section__logo"
-          src={raptorsLogo}
-          alt="Toronto Raptors Logo"
-        />
+        <NavLink to="/raptors">
+          <img
+            className="logos-section__logo"
+            src={raptorsLogo}
+            alt="Toronto Raptors Logo"
+          />
+        </NavLink>
         <img
           className="logos-section__logo"
           src={rocketsLogo}
