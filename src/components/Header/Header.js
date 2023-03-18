@@ -6,7 +6,7 @@ function Header() {
     <section className="header">
       <div className="header__nav">
         <img className="header__nba-logo" src={nbaLogoSvg} alt="NBA Logo" />
-        <h1 className="header__title">Capstone Project</h1>
+        <h1 className="header__title">Marco Luciano Capstone Project</h1>
       </div>
     </section>
   );
