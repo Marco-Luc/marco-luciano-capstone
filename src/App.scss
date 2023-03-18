@@ -1,0 +1,11 @@
+@use "./styles/partials/variables" as *;
+@use "./styles/partials/breakpoints" as *;
+@use "./styles/partials/mixin" as *;
+@use "./styles/partials/global" as *;
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $cardItalic, sans-serif;
+}
