@@ -8,6 +8,8 @@ import pascalSiakam from "../../assets/Images/RaptorsPlayers/siakam.jpg";
 import kawhiClip from "../../assets/Videos/RaptorsVideos/KawhiClip.mp4";
 
 function Raptors() {
+  // do this with an onclick within the card div, rather than addeventlistener
+
   // const cardFlip = document.querySelectorAll(".card");
 
   // cardFlip.forEach((card) => {

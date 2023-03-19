@@ -38,12 +38,11 @@
     height: 100%;
     border-radius: 1.875rem;
     backface-visibility: hidden;
-    background-image: url(../../assets/Gifs/sparkles.gif);
+    // background-image: url(../../assets/Gifs/sparkles.gif);
     background-blend-mode: screen;
     opacity: 0.9;
   }
   &__front {
-    background-color: rgb(117, 59, 189);
     background-color: rgb(180, 151, 90);
     &__title {
       text-align: center;
@@ -117,6 +116,89 @@
   }
 }
 
-// .cards__card-flip--active {
-//   transform: rotateY(180deg);
-// }
+.cards__card-flip--active {
+  transform: rotateY(180deg);
+}
+
+.card__front:before,
+.card__front:after,
+.card__back:before,
+.card__back:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-image: linear-gradient(
+    115deg,
+    transparent 0%,
+    rgb(180, 151, 90) 30%,
+    rgb(189, 27, 33) 70%,
+    transparent 20%
+  );
+  background-position: 0% 0%;
+  background-repeat: no-repeat;
+  border-radius: 1.875rem;
+  background-size: 300% 300%;
+  mix-blend-mode: color-dodge;
+  opacity: 0.2;
+  z-index: 1;
+  animation: holoGradient 5s ease infinite;
+}
+
+.card__front:after,
+.card__back:after {
+  background-image: url("../../assets/Gifs/sparkles.gif");
+  background-size: 100%;
+  mix-blend-mode: color-dodge;
+  opacity: 0.1;
+  z-index: 2;
+  animation: holoSparkle 10s ease infinite;
+}
+
+@keyframes holoSparkle {
+  0% {
+    opacity: 0.3;
+  }
+  5% {
+    opacity: 0.4;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+@keyframes holoGradient {
+  0% {
+    opacity: 0;
+    background-position: 0% 0%;
+  }
+  100% {
+    opacity: 0;
+    background-position: 50% 50%;
+  }
+  8% {
+    opacity: 0;
+  }
+  10% {
+    background-position: 0% 0%;
+  }
+  19% {
+    background-position: 50% 50%;
+    opacity: 0.3;
+  }
+  35% {
+    background-position: 50% 50%;
+  }
+  55% {
+    background-position: 0% 0%;
+    opacity: 0.3;
+  }
+  75% {
+    opacity: 0;
+  }
+}
