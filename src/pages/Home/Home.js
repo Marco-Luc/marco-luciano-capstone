@@ -36,6 +36,11 @@ import wizardsLogo from "../../assets/Logos/TeamLogosSVG/SVG-wizards.svg";
 function Home() {
   return (
     <section className="logos-section">
+      <div className="compare-button__section">
+        <NavLink to="/raptors">
+          <button className="compare-button">Compare Stats</button>
+        </NavLink>
+      </div>
       <div className="logos-section__rows">
         <img
           className="logos-section__logo logos-section__logo-sixers"
@@ -189,6 +194,13 @@ function Home() {
           src={wizardsLogo}
           alt="Washington Wizards Logo"
         />
+      </div>
+      <div className="compare-button__section-desktop-view">
+        <NavLink to="/raptors">
+          <button className="compare-button__desktop-view">
+            Compare Stats
+          </button>
+        </NavLink>
       </div>
     </section>
   );
