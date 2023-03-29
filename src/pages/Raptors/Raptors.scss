@@ -12,18 +12,18 @@
   }
 }
 
-.card-section {
+.raptors-card-section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-.card-container {
+.raptors-card-container {
   perspective: 62.5rem;
   padding: 1rem 0.25rem;
 }
 
-.card {
+.raptors-card {
   width: 17.75rem;
   height: 25rem;
   position: relative;
@@ -118,14 +118,14 @@
   }
 }
 
-.cards__card-flip--active {
+.raptors-cards__card-flip--active {
   transform: rotateY(180deg);
 }
 
-.card__front:before,
-.card__front:after,
-.card__back:before,
-.card__back:after {
+.raptors-card__front:before,
+.raptors-card__front:after,
+.raptors-card__back:before,
+.raptors-card__back:after {
   content: "";
   position: absolute;
   left: 0;
@@ -149,8 +149,8 @@
   animation: holoGradient 5s ease infinite;
 }
 
-.card__front:after,
-.card__back:after {
+.raptors-card__front:after,
+.raptors-card__back:after {
   background-image: url("../../assets/Gifs/sparkles.gif");
   background-size: 100%;
   mix-blend-mode: color-dodge;
