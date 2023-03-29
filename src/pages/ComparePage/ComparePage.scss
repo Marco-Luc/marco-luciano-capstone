@@ -9,12 +9,12 @@
     justify-content: space-around;
     &__raptors {
       @include tablet {
-        margin-right: 7rem;
+        // margin-right: 7rem;
       }
     }
     &__celtics {
       @include tablet {
-        margin-left: 7rem;
+        // margin-left: 7rem;
       }
     }
   }
@@ -27,6 +27,7 @@
 .compare-section {
   display: flex;
   flex-direction: column;
+  align-items: center;
   @include tablet {
     display: flex;
     flex-direction: row;
