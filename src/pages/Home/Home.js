@@ -37,7 +37,7 @@ function Home() {
   return (
     <section className="logos-section">
       <div className="compare-button__section">
-        <NavLink to="/raptors">
+        <NavLink to="/comparepage">
           <button className="compare-button">Compare Stats</button>
         </NavLink>
       </div>
@@ -62,11 +62,13 @@ function Home() {
           src={caveliersLogo}
           alt="Cleveland Caveliers"
         />
-        <img
-          className="logos-section__logo"
-          src={celticsLogo}
-          alt="Boston Celtics Logo"
-        />
+        <NavLink to="/celtics">
+          <img
+            className="logos-section__logo"
+            src={celticsLogo}
+            alt="Boston Celtics Logo"
+          />
+        </NavLink>
         <img
           className="logos-section__logo"
           src={clippersLogo}
@@ -196,7 +198,7 @@ function Home() {
         />
       </div>
       <div className="compare-button__section-desktop-view">
-        <NavLink to="/raptors">
+        <NavLink to="/comparepage">
           <button className="compare-button__desktop-view">
             Compare Stats
           </button>

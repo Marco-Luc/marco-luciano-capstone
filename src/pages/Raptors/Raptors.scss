@@ -1,4 +1,5 @@
 @use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixin" as *;
 
 .main-section {
   background-color: black;
@@ -48,6 +49,7 @@
       text-align: center;
       color: white;
       padding-top: 1rem;
+      font-size: 2rem;
     }
     &__description {
       text-align: center;
