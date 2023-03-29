@@ -1,6 +1,47 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixin" as *;
 
+.compare-page {
+  background-color: rgb(0, 0, 0);
+  &__dropdown-menus {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    &__raptors {
+      @include tablet {
+        margin-right: 7rem;
+      }
+    }
+    &__celtics {
+      @include tablet {
+        margin-left: 7rem;
+      }
+    }
+  }
+  &__button-section {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.compare-section {
+  display: flex;
+  flex-direction: column;
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  &__modal {
+    background-color: white;
+    width: 20%;
+    height: 10rem;
+    &__text {
+      color: white;
+    }
+  }
+}
+
 // Drop down menu styling below
 
 /* Dropdown Button */
