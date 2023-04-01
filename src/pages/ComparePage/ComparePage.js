@@ -1,12 +1,17 @@
 import "./ComparePage.scss";
-import Card1 from "../../components/RaptorsCard/RaptorsCard";
 import { useState } from "react";
+// import PlaceholderCard from "../../components/PlaceholderCard/Placeholdercard";
 import RaptorsCard from "../../components/RaptorsCard/RaptorsCard";
 import CelticsCard from "../../components/CelticsCard/CelticsCard";
 
 function ComparePage() {
+  // const [placeholderCard, setPlaceholderCard] = useState("placeholdercard");
   const [selectedCard, setSelectedCard] = useState("card1");
   const [selectedCard2, setSelectedCard2] = useState("card2");
+
+  // const handlePlaceholderCard = (event) => {
+  //   setPlaceholderCard(event.target.value);
+  // };
 
   const handleCard = (event) => {
     setSelectedCard(event.target.value);
@@ -38,7 +43,7 @@ function ComparePage() {
           placeholder="Please select"
           onChange={handleCard}
         >
-          <option>Please select</option>
+          <option value="placeholdercard">Please select</option>
           <option value="card1">Fred Vanvleet</option>
           <option>Gary Trent Jr.</option>
           <option>OG Anunoby</option>
@@ -53,7 +58,7 @@ function ComparePage() {
           placeholder="Please select"
           onChange={handleCard2}
         >
-          <option>Please select</option>
+          <option value="placeholdercard">Please select</option>
           <option>Jaylen Brown</option>
           <option value="card2">Jayson Tatum</option>
           <option>Al Horford</option>

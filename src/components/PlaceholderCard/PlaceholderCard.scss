@@ -1,0 +1,13 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixin" as *;
+
+.placeholder-card {
+  width: 17.75rem;
+  height: 25rem;
+}
+
+.placeholder-card-container {
+  perspective: 62.5rem;
+  padding: 1rem 0.25rem;
+  position: relative;
+}
