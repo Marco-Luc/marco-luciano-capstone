@@ -1,111 +1,45 @@
 import "./ComparePage.scss";
-import fredVanvleet from "../../assets/Images/RaptorsPlayers/fvv.jpg";
-import kawhiClip from "../../assets/Videos/RaptorsVideos/KawhiClip.mp4";
+import Card1 from "../../components/RaptorsCard/RaptorsCard";
+import { useState } from "react";
+import RaptorsCard from "../../components/RaptorsCard/RaptorsCard";
+import CelticsCard from "../../components/CelticsCard/CelticsCard";
 
 function ComparePage() {
+  const [selectedCard, setSelectedCard] = useState("card1");
+  const [selectedCard2, setSelectedCard2] = useState("card2");
+
+  const handleCard = (event) => {
+    setSelectedCard(event.target.value);
+  };
+
+  const handleCard2 = (event) => {
+    setSelectedCard2(event.target.value);
+  };
+
   return (
     <section className="compare-page">
       <h2 className="compare-page__header">Compare Stats</h2>
       <div className="compare-section">
-        <div className="raptors-card-container">
-          <div className="raptors-card">
-            <div className="raptors-card__front">
-              <h2 className="raptors-card__front__title">Fred Vanvleet</h2>
-              <img
-                className="raptors-card__image"
-                src={fredVanvleet}
-                alt="Fred VanVleet"
-              />
-              <p className="raptors-card__front__description">
-                Guard, Toronto Raptors
-              </p>
-              <p className="raptors-card__front__quote">
-                "Mr. Bet On Yourself"
-              </p>
-            </div>
-            <div className="raptors-card__back">
-              <h2 className="raptors-card__stats-title">Stats</h2>
-              <div className="raptors-card__stats-container">
-                <ul className="raptors-card__stats">
-                  <li className="raptors-card__stats-stat">PPG: 25.3</li>
-                  <li className="raptors-card__stats-stat">APG: 7.8</li>
-                  <li className="raptors-card__stats-stat">RPG: 7.7</li>
-                  <li className="raptors-card__stats-stat">SPG: 1</li>
-                  <li className="raptors-card__stats-stat">BPG: 2</li>
-                </ul>
-                <video className="raptors-card__back__video" poster controls>
-                  <source src={kawhiClip}></source>
-                </video>
-                <p className="raptors-card__back__bio">
-                  Fred VanVleet is a well-rounded basketball player with a
-                  versatile skill set. He excels at shooting from beyond the
-                  arc, playing tough defense, and creating opportunities for
-                  himself and his teammates. His strong work ethic and
-                  leadership skills make him a valuable asset to any team, and
-                  he was a key player in the Toronto Raptors' championship run
-                  in 2019.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+        {selectedCard === "card1" && <RaptorsCard />}
         <div className="compare-section__modal">
-          <p className="compare-section__modal-text">Testing</p>
-        </div>
-        <div className="raptors-card-container">
-          <div className="raptors-card">
-            <div className="raptors-card__front">
-              <h2 className="raptors-card__front__title">Fred Vanvleet</h2>
-              <img
-                className="raptors-card__image"
-                src={fredVanvleet}
-                alt="Fred VanVleet"
-              />
-              <p className="raptors-card__front__description">
-                Guard, Toronto Raptors
-              </p>
-              <p className="raptors-card__front__quote">
-                "Mr. Bet On Yourself"
-              </p>
-            </div>
-            <div className="raptors-card__back">
-              <h2 className="raptors-card__stats-title">Stats</h2>
-              <div className="raptors-card__stats-container">
-                <ul className="raptors-card__stats">
-                  <li className="raptors-card__stats-stat">PPG: 25.3</li>
-                  <li className="raptors-card__stats-stat">APG: 7.8</li>
-                  <li className="raptors-card__stats-stat">RPG: 7.7</li>
-                  <li className="raptors-card__stats-stat">SPG: 1</li>
-                  <li className="raptors-card__stats-stat">BPG: 2</li>
-                </ul>
-                <video className="raptors-card__back__video" poster controls>
-                  <source src={kawhiClip}></source>
-                </video>
-                <p className="raptors-card__back__bio">
-                  Fred VanVleet is a well-rounded basketball player with a
-                  versatile skill set. He excels at shooting from beyond the
-                  arc, playing tough defense, and creating opportunities for
-                  himself and his teammates. His strong work ethic and
-                  leadership skills make him a valuable asset to any team, and
-                  he was a key player in the Toronto Raptors' championship run
-                  in 2019.
-                </p>
-              </div>
-            </div>
+          <div className="compare-section__modal-teams">
+            <p className="compare-section__modal-text">Raptors</p>
+            <p className="compare-section__modal-text">Celtics</p>
           </div>
         </div>
+        {selectedCard2 === "card2" && <CelticsCard />}
       </div>
       <div className="compare-page__dropdown-menus">
         <select
           className="compare-page__dropdown-menus__raptors"
           type="text"
           name="category"
-          value="raptors"
+          value={selectedCard}
           placeholder="Please select"
-          onChange="temporary"
+          onChange={handleCard}
         >
           <option>Please select</option>
-          <option>Fred Vanvleet</option>
+          <option value="card1">Fred Vanvleet</option>
           <option>Gary Trent Jr.</option>
           <option>OG Anunoby</option>
           <option>Scottie Barnes</option>
@@ -115,13 +49,13 @@ function ComparePage() {
           className="compare-page__dropdown-menus__celtics"
           type="text"
           name="category"
-          value="celtics"
+          value={selectedCard2}
           placeholder="Please select"
-          onChange="temporary"
+          onChange={handleCard2}
         >
           <option>Please select</option>
           <option>Jaylen Brown</option>
-          <option>Jayson Tatum</option>
+          <option value="card2">Jayson Tatum</option>
           <option>Al Horford</option>
           <option>Robert Williams III</option>
         </select>
