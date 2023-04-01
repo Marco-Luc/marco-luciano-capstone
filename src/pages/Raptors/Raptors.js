@@ -127,8 +127,7 @@ function Raptors() {
                 playmaking abilities, and high basketball IQ. His versatility,
                 leadership skills, and strong work ethic have also contributed
                 to his success, earning him the Rookie of the Year award for the
-                2021/2022 season. This recognition highlights his potential to
-                become a top player in the league.
+                2021/2022 season.
               </p>
             </div>
           </div>

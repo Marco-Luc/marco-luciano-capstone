@@ -5,13 +5,8 @@ import RaptorsCard from "../../components/RaptorsCard/RaptorsCard";
 import CelticsCard from "../../components/CelticsCard/CelticsCard";
 
 function ComparePage() {
-  // const [placeholderCard, setPlaceholderCard] = useState("placeholdercard");
   const [selectedCard, setSelectedCard] = useState("card1");
   const [selectedCard2, setSelectedCard2] = useState("card2");
-
-  // const handlePlaceholderCard = (event) => {
-  //   setPlaceholderCard(event.target.value);
-  // };
 
   const handleCard = (event) => {
     setSelectedCard(event.target.value);
@@ -26,10 +21,24 @@ function ComparePage() {
       <h2 className="compare-page__header">Compare Stats</h2>
       <div className="compare-section">
         {selectedCard === "card1" && <RaptorsCard />}
-        <div className="compare-section__modal">
-          <div className="compare-section__modal-teams">
-            <p className="compare-section__modal-text">Raptors</p>
-            <p className="compare-section__modal-text">Celtics</p>
+        <div className="compare-section__score-card">
+          <div className="compare-section__score-card-stats-list">
+            <div className="compare-section__score-card-stats">
+              <p className="compare-section__score-card-teams">Raptors</p>
+              <p className="compare-section__score-card-stat">Points: </p>
+              <p className="compare-section__score-card-stat">Assists: </p>
+              <p className="compare-section__score-card-stat">Rebounds: </p>
+              <p className="compare-section__score-card-stat">Steals: </p>
+              <p className="compare-section__score-card-stat">Blocks: </p>
+            </div>
+            <div className="compare-section__score-card-stats">
+              <p className="compare-section__score-card-teams">Celtics</p>
+              <p className="compare-section__score-card-stat">Points: </p>
+              <p className="compare-section__score-card-stat">Assists: </p>
+              <p className="compare-section__score-card-stat">Rebounds: </p>
+              <p className="compare-section__score-card-stat">Steals: </p>
+              <p className="compare-section__score-card-stat">Blocks: </p>
+            </div>
           </div>
         </div>
         {selectedCard2 === "card2" && <CelticsCard />}
@@ -73,40 +82,5 @@ function ComparePage() {
     </section>
   );
 }
-
-//   {
-/* <div class="dropdown">
-        <button onclick={myFunction()} className="drop-button">
-          Select player
-        </button>
-        <div id="my-dropdown" className="dropdown-content">
-          <p>Link 1</p>
-          <p>Link 2</p>
-          <p>Link 3</p>
-        </div>
-      </div> */
-//   }
-
-//Drop down menu functionality below
-
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-// function myFunction() {
-//   document.getElementById("myDropdown").classList.toggle("show");
-// }
-
-// // Close the dropdown menu if the user clicks outside of it
-// window.onclick = function (event) {
-//   if (!event.target.matches(".dropbtn")) {
-//     const dropdowns = document.getElementsByClassName("dropdown-content");
-//     let i;
-//     for (i = 0; i < dropdowns.length; i++) {
-//       var openDropdown = dropdowns[i];
-//       if (openDropdown.classList.contains("show")) {
-//         openDropdown.classList.remove("show");
-//       }
-//     }
-//   }
-// };
 
 export default ComparePage;
