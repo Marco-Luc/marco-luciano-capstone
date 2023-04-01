@@ -9,8 +9,8 @@ import kawhiClip from "../../assets/Videos/RaptorsVideos/KawhiClip.mp4";
 
 function Raptors() {
   return (
-    <section className="main-section">
-      <h2 className="main-section__header">Toronto Raptors</h2>
+    <section className="main-section-raptors">
+      <h2 className="main-section-raptors__header">Toronto Raptors</h2>
       <div className="raptors-card-section">
         <div className="raptors-card-container">
           <div className="raptors-card">

@@ -1,12 +1,12 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixin" as *;
 
-.celtics-card-container {
+.single-celtics-card-container {
   perspective: 62.5rem;
   padding: 1rem 0.25rem;
 }
 
-.celtics-card {
+.single-celtics-card {
   width: 17.75rem;
   height: 25rem;
   position: relative;
@@ -48,7 +48,7 @@
     }
   }
   &__back {
-    background-color: rgb(0, 122, 0);
+    background-color: rgb(0, 122, 51);
     color: white;
     transform: rotateY(180deg);
     &__title {
@@ -101,14 +101,14 @@
   }
 }
 
-.celtics-cards__card-flip--active {
+.single-celtics-cards__card-flip--active {
   transform: rotateY(180deg);
 }
 
-.celtics-card__front:before,
-.celtics-card__front:after,
-.celtics-card__back:before,
-.celtics-card__back:after {
+.single-celtics-card__front:before,
+.single-celtics-card__front:after,
+.single-celtics-card__back:before,
+.single-celtics-card__back:after {
   content: "";
   position: absolute;
   left: 0;
@@ -132,8 +132,8 @@
   animation: holoGradient 5s ease infinite;
 }
 
-.celtics-card__front:after,
-.celtics-card__back:after {
+.single-celtics-card__front:after,
+.single-celtics-card__back:after {
   background-image: url("../../assets/Gifs/sparkles.gif");
   background-size: 100%;
   mix-blend-mode: color-dodge;
