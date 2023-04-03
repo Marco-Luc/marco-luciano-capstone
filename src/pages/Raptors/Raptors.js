@@ -38,8 +38,13 @@ function Raptors() {
                   <li className="raptors-card__stats-stat">SPG: 1</li>
                   <li className="raptors-card__stats-stat">BPG: 2</li>
                 </ul>
-                <video className="raptors-card__back__video" poster controls>
-                  <source src={kawhiClip}></source>
+                <video
+                  className="raptors-card__back__video"
+                  poster
+                  controls
+                  autoplay
+                >
+                  <source src={kawhiClip} type="video/mp4"></source>
                 </video>
                 <p className="raptors-card__back__bio">
                   Fred VanVleet is a well-rounded basketball player with a

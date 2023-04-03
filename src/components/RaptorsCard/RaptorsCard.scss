@@ -143,6 +143,18 @@
   animation: holoSparkle 10s ease infinite;
 }
 
+.raptors-placeholder-card {
+  background-color: black;
+  width: 17.75rem;
+  height: 25rem;
+  position: relative;
+  perspective: 62.5rem;
+  padding: 1rem 0.25rem;
+  &__text {
+    color: white;
+  }
+}
+
 @keyframes holoSparkle {
   0% {
     opacity: 0.3;

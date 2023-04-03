@@ -33,9 +33,8 @@ import CelticsCard from "../../components/CelticsCard/CelticsCard";
 // Will need to do step 2 twice - once for the raptors and once for the celtics
 
 function ComparePage() {
-  // const [selectedCard, setSelectedCard] = useState("card1");
-  // const [selectedCard2, setSelectedCard2] = useState("card2");
-
+  const [raptorsCard, setRaptorsCard] = useState(false);
+  const [celticsCard, setCelticsCard] = useState(false);
   const [playerList, setPlayerList] = useState([]);
 
   useEffect(() => {
@@ -56,47 +55,84 @@ function ComparePage() {
   const raptorsPlayers = playerList.filter(
     (player) => player.team === "raptors"
   );
-  console.log(raptorsPlayers);
 
   const celticsPlayers = playerList.filter(
     (player) => player.team === "celtics"
   );
-  console.log(celticsPlayers);
 
-  // const handleCard = (event) => {
-  //   setSelectedCard(event.target.value);
-  // };
+  const handleRaptorsCard = (event) => {
+    console.log(event.target.value);
+    axios
+      .get(`http://localhost:2323/players/${event.target.value}`)
+      .then((response) => {
+        setRaptorsCard(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
-  // const handleCard2 = (event) => {
-  //   setSelectedCard2(event.target.value);
-  // };
+  const handleCelticsCard = (event) => {
+    console.log(event.target.value);
+    axios
+      .get(`http://localhost:2323/players/${event.target.value}`)
+      .then((response) => {
+        setCelticsCard(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   return (
     <section className="compare-page">
       <h2 className="compare-page__header">Compare Stats</h2>
       <div className="compare-section">
-        {/* {selectedCard === "card1" && <RaptorsCard />} */}
+        <RaptorsCard raptorsCard={raptorsCard} />
         <div className="compare-section__score-card">
           <div className="compare-section__score-card-stats-list">
             <div className="compare-section__score-card-stats">
               <p className="compare-section__score-card-teams">Raptors</p>
-              <p className="compare-section__score-card-stat">Points:</p>
-              <p className="compare-section__score-card-stat">Assists:</p>
-              <p className="compare-section__score-card-stat">Rebounds: </p>
-              <p className="compare-section__score-card-stat">Steals: </p>
-              <p className="compare-section__score-card-stat">Blocks: </p>
+              <p className="compare-section__score-card-stat">
+                Points: {raptorsCard.points}
+              </p>
+              <p className="compare-section__score-card-stat">
+                Assists: {raptorsCard.assists}
+              </p>
+              <p className="compare-section__score-card-stat">
+                Rebounds: {raptorsCard.rebounds}
+              </p>
+              <p className="compare-section__score-card-stat">
+                Steals: {raptorsCard.steals}
+              </p>
+              <p className="compare-section__score-card-stat">
+                Blocks: {raptorsCard.blocks}
+              </p>
             </div>
             <div className="compare-section__score-card-stats">
               <p className="compare-section__score-card-teams">Celtics</p>
-              <p className="compare-section__score-card-stat">Points:</p>
-              <p className="compare-section__score-card-stat">Assists: </p>
-              <p className="compare-section__score-card-stat">Rebounds: </p>
-              <p className="compare-section__score-card-stat">Steals: </p>
-              <p className="compare-section__score-card-stat">Blocks: </p>
+              <p className="compare-section__score-card-stat">
+                Points: {celticsCard.points}
+              </p>
+              <p className="compare-section__score-card-stat">
+                Assists: {celticsCard.assists}
+              </p>
+              <p className="compare-section__score-card-stat">
+                Rebounds:
+                {celticsCard.rebounds}
+              </p>
+              <p className="compare-section__score-card-stat">
+                Steals:
+                {celticsCard.steals}
+              </p>
+              <p className="compare-section__score-card-stat">
+                Blocks:
+                {celticsCard.blocks}
+              </p>
             </div>
           </div>
         </div>
-        {/* {selectedCard2 === "card2" && <CelticsCard />} */}
+        <CelticsCard celticsCard={celticsCard} />
       </div>
       <div className="compare-page__dropdown-menus">
         <select
@@ -105,11 +141,11 @@ function ComparePage() {
           name="players"
           // value={selectedCard}
           placeholder="Please select"
-          // onChange={handleCard}
+          onChange={handleRaptorsCard}
         >
           <option>Please select</option>
           {raptorsPlayers.map((raptorsPlayer) => (
-            <option key={raptorsPlayer.id} value={raptorsPlayer.name}>
+            <option key={raptorsPlayer.id} value={raptorsPlayer.id}>
               {raptorsPlayer.name}
             </option>
           ))}
@@ -119,11 +155,11 @@ function ComparePage() {
           type="text"
           // value={selectedCard2}
           placeholder="Please select"
-          // onChange={handleCard2}
+          onChange={handleCelticsCard}
         >
           <option>Please select</option>
           {celticsPlayers.map((celticsPlayer) => (
-            <option key={celticsPlayer.id} value={celticsPlayer.name}>
+            <option key={celticsPlayer.id} value={celticsPlayer.id}>
               {celticsPlayer.name}
             </option>
           ))}
