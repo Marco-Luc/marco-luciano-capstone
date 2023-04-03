@@ -1,36 +1,34 @@
 import "./ComparePage.scss";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import axios from "axios";
 import RaptorsCard from "../../components/RaptorsCard/RaptorsCard";
 import CelticsCard from "../../components/CelticsCard/CelticsCard";
 
-function ComparePage() {
+function ComparePage({ raptorsPlayers, celticsPlayers }) {
   const [raptorsCard, setRaptorsCard] = useState(false);
   const [celticsCard, setCelticsCard] = useState(false);
-  const [playerList, setPlayerList] = useState([]);
-
-  useEffect(() => {
-    axios
-      .get("http://localhost:2323/players", {})
-      .then((response) => {
-        setPlayerList(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, []);
-
-  if (!playerList) {
-    return <h1>Loading...</h1>;
-  }
-
-  const raptorsPlayers = playerList.filter(
-    (player) => player.team === "raptors"
-  );
-
-  const celticsPlayers = playerList.filter(
-    (player) => player.team === "celtics"
-  );
+  const [compareStats, setCompareStats] = useState([
+    {
+      raptorsPlayerPoints: 0,
+      celticsPlayerPoints: 0,
+    },
+    {
+      raptorsPlayerAssists: 0,
+      celticsPlayerAssists: 0,
+    },
+    {
+      raptorsPlayerRebounds: 0,
+      celticsPlayerRebounds: 0,
+    },
+    {
+      raptorsPlayerSteals: 0,
+      celticsPlayerSteals: 0,
+    },
+    {
+      raptorsPlayerBlocks: 0,
+      celticsPlayerBlocks: 0,
+    },
+  ]);
 
   const handleRaptorsCard = (event) => {
     console.log(event.target.value);
@@ -38,6 +36,13 @@ function ComparePage() {
       .get(`http://localhost:2323/players/${event.target.value}`)
       .then((response) => {
         setRaptorsCard(response.data);
+        const newCompareStats = [...compareStats];
+        newCompareStats[0].raptorsPlayerPoints = response.data.points;
+        newCompareStats[1].raptorsPlayerAssists = response.data.assists;
+        newCompareStats[2].raptorsPlayerRebounds = response.data.rebounds;
+        newCompareStats[3].raptorsPlayerSteals = response.data.steals;
+        newCompareStats[4].raptorsPlayerBlocks = response.data.blocks;
+        setCompareStats(newCompareStats);
       })
       .catch((error) => {
         console.log(error);
@@ -50,11 +55,20 @@ function ComparePage() {
       .get(`http://localhost:2323/players/${event.target.value}`)
       .then((response) => {
         setCelticsCard(response.data);
+        const newCompareStats = [...compareStats];
+        newCompareStats[0].celticsPlayerPoints = response.data.points;
+        newCompareStats[1].celticsPlayerAssists = response.data.assists;
+        newCompareStats[2].celticsPlayerRebounds = response.data.rebounds;
+        newCompareStats[3].celticsPlayerSteals = response.data.steals;
+        newCompareStats[4].celticsPlayerBlocks = response.data.blocks;
+        setCompareStats(newCompareStats);
       })
       .catch((error) => {
         console.log(error);
       });
   };
+
+  console.log(compareStats);
 
   return (
     <section className="compare-page">
@@ -65,39 +79,109 @@ function ComparePage() {
           <div className="compare-section__score-card-stats-list">
             <div className="compare-section__score-card-stats">
               <p className="compare-section__score-card-teams">Raptors</p>
-              <p className="compare-section__score-card-stat">
+              <p
+                className={`"compare-section__score-card-stat" ${
+                  compareStats[0].raptorsPlayerPoints >
+                    compareStats[0].celticsPlayerPoints && raptorsCard
+                    ? "green"
+                    : "red"
+                }`}
+              >
                 Points:&nbsp;{raptorsCard.points}
               </p>
-              <p className="compare-section__score-card-stat">
+              <p
+                className={`"compare-section__score-card-stat" ${
+                  compareStats[1].raptorsPlayerAssists >
+                    compareStats[1].celticsPlayerAssists && raptorsCard
+                    ? "green"
+                    : "red"
+                }`}
+              >
                 Assists:&nbsp;{raptorsCard.assists}
               </p>
-              <p className="compare-section__score-card-stat">
+              <p
+                className={`"compare-section__score-card-stat" ${
+                  compareStats[2].raptorsPlayerRebounds >
+                    compareStats[2].celticsPlayerRebounds && raptorsCard
+                    ? "green"
+                    : "red"
+                }`}
+              >
                 Rebounds:&nbsp;{raptorsCard.rebounds}
               </p>
-              <p className="compare-section__score-card-stat">
+              <p
+                className={`"compare-section__score-card-stat" ${
+                  compareStats[3].raptorsPlayerSteals >
+                    compareStats[3].celticsPlayerSteals && raptorsCard
+                    ? "green"
+                    : "red"
+                }`}
+              >
                 Steals:&nbsp;{raptorsCard.steals}
               </p>
-              <p className="compare-section__score-card-stat">
+              <p
+                className={`"compare-section__score-card-stat" ${
+                  compareStats[4].raptorsPlayerBlocks >
+                    compareStats[4].celticsPlayerBlocks && raptorsCard
+                    ? "green"
+                    : "red"
+                }`}
+              >
                 Blocks:&nbsp;{raptorsCard.blocks}
               </p>
             </div>
             <div className="compare-section__score-card-stats">
               <p className="compare-section__score-card-teams">Celtics</p>
-              <p className="compare-section__score-card-stat">
+              <p
+                className={`"compare-section__score-card-stat" ${
+                  compareStats[0].celticsPlayerPoints >
+                  compareStats[0].raptorsPlayerPoints
+                    ? "green"
+                    : "red"
+                }`}
+              >
                 Points:&nbsp;{celticsCard.points}
               </p>
-              <p className="compare-section__score-card-stat">
+              <p
+                className={`"compare-section__score-card-stat" ${
+                  compareStats[1].celticsPlayerAssists >
+                  compareStats[1].raptorsPlayerAssists
+                    ? "green"
+                    : "red"
+                }`}
+              >
                 Assists:&nbsp;{celticsCard.assists}
               </p>
-              <p className="compare-section__score-card-stat">
+              <p
+                className={`"compare-section__score-card-stat" ${
+                  compareStats[2].celticsPlayerRebounds >
+                  compareStats[2].raptorsPlayerRebounds
+                    ? "green"
+                    : "red"
+                }`}
+              >
                 Rebounds:&nbsp;
                 {celticsCard.rebounds}
               </p>
-              <p className="compare-section__score-card-stat">
+              <p
+                className={`"compare-section__score-card-stat" ${
+                  compareStats[3].celticsPlayerSteals >
+                  compareStats[3].raptorsPlayerSteals
+                    ? "green"
+                    : "red"
+                }`}
+              >
                 Steals:&nbsp;
                 {celticsCard.steals}
               </p>
-              <p className="compare-section__score-card-stat">
+              <p
+                className={`"compare-section__score-card-stat" ${
+                  compareStats[4].celticsPlayerBlocks >
+                  compareStats[4].raptorsPlayerBlocks
+                    ? "green"
+                    : "red"
+                }`}
+              >
                 Blocks:&nbsp;
                 {celticsCard.blocks}
               </p>

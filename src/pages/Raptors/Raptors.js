@@ -1,261 +1,76 @@
 import "./Raptors.scss";
-import fredVanvleet from "../../assets/Images/RaptorsPlayers/fvv.jpg";
-import garyTrentJr from "../../assets/Images/RaptorsPlayers/gtj.jpg";
-import scottieBarnes from "../../assets/Images/RaptorsPlayers/scottie.jpg";
-import ogAnunoby from "../../assets/Images/RaptorsPlayers/og.jpg";
-import pascalSiakam from "../../assets/Images/RaptorsPlayers/siakam.jpg";
-// import jakobPoeltl from "../../assets/Images/RaptorsPlayers/poeltl.jpg";
-import kawhiClip from "../../assets/Videos/RaptorsVideos/KawhiClip.mp4";
 
-function Raptors() {
+function Raptors({ raptorsPlayers }) {
+  console.log(raptorsPlayers);
+
+  if (!raptorsPlayers) {
+    return <h1>Loading...</h1>;
+  }
   return (
     <section className="main-section-raptors">
       <h2 className="main-section-raptors__header">Toronto Raptors</h2>
-      <div className="raptors-card-section">
-        <div className="raptors-card-container">
-          <div className="raptors-card">
-            <div className="raptors-card__front">
-              <h2 className="raptors-card__front__title">Fred Vanvleet</h2>
-              <img
-                className="raptors-card__image"
-                src={fredVanvleet}
-                alt="Fred VanVleet"
-              />
-              <p className="raptors-card__front__description">
-                Guard, Toronto Raptors
-              </p>
-              <p className="raptors-card__front__quote">
-                "Mr. Bet On Yourself"
-              </p>
-            </div>
-            <div className="raptors-card__back">
-              <h2 className="raptors-card__stats-title">Stats</h2>
-              <div className="raptors-card__stats-container">
-                <ul className="raptors-card__stats">
-                  <li className="raptors-card__stats-stat">PPG: 25.3</li>
-                  <li className="raptors-card__stats-stat">APG: 7.8</li>
-                  <li className="raptors-card__stats-stat">RPG: 7.7</li>
-                  <li className="raptors-card__stats-stat">SPG: 1</li>
-                  <li className="raptors-card__stats-stat">BPG: 2</li>
-                </ul>
-                <video
-                  className="raptors-card__back__video"
-                  poster
-                  controls
-                  autoplay
-                >
-                  <source src={kawhiClip} type="video/mp4"></source>
-                </video>
-                <p className="raptors-card__back__bio">
-                  Fred VanVleet is a well-rounded basketball player with a
-                  versatile skill set. He excels at shooting from beyond the
-                  arc, playing tough defense, and creating opportunities for
-                  himself and his teammates. His strong work ethic and
-                  leadership skills make him a valuable asset to any team, and
-                  he was a key player in the Toronto Raptors' championship run
-                  in 2019.
-                </p>
+      <div className="main-raptors-section">
+        {raptorsPlayers?.map((raptorsPlayer) => {
+          return (
+            <div className="raptors-card-section">
+              <div className="raptors-card-container">
+                <div className="raptors-card">
+                  <div className="raptors-card__front">
+                    <h2 className="raptors-card__front__title">
+                      {raptorsPlayer.name}
+                    </h2>
+                    <img
+                      className="raptors-card__image"
+                      src={raptorsPlayer.image}
+                      alt={raptorsPlayer.name}
+                    />
+                    <p className="raptors-card__front__description">
+                      {raptorsPlayer.description}
+                    </p>
+                    <p className="raptors-card__front__quote">
+                      {raptorsPlayer.quote}
+                    </p>
+                  </div>
+                  <div className="raptors-card__back">
+                    <h2 className="raptors-card__stats-title">Stats</h2>
+                    <div className="raptors-card__stats-container">
+                      <ul className="raptors-card__stats">
+                        <li className="raptors-card__stats-stat">
+                          PPG: {raptorsPlayer.points}
+                        </li>
+                        <li className="raptors-card__stats-stat">
+                          APG: {raptorsPlayer.assists}
+                        </li>
+                        <li className="raptors-card__stats-stat">
+                          RPG: {raptorsPlayer.rebounds}
+                        </li>
+                        <li className="raptors-card__stats-stat">
+                          SPG: {raptorsPlayer.steals}
+                        </li>
+                        <li className="raptors-card__stats-stat">
+                          BPG: {raptorsPlayer.blocks}
+                        </li>
+                      </ul>
+                      <video
+                        className="raptors-card__back__video"
+                        poster
+                        controls
+                      >
+                        <source
+                          src={raptorsPlayer.video}
+                          type="video/mp4"
+                        ></source>
+                      </video>
+                      <p className="raptors-card__back__bio">
+                        {raptorsPlayer.bio}
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div className="raptors-card-container">
-          <div className="raptors-card">
-            <div className="raptors-card__front">
-              <h2 className="raptors-card__front__title">Gary Trent Jr.</h2>
-              <img
-                className="raptors-card__image"
-                src={garyTrentJr}
-                alt="Gary Trent Jr."
-              />
-              <p className="raptors-card__front__description">
-                Guard, Toronto Raptors
-              </p>
-              <p className="raptors-card__front__quote">"Shaq of the MAC"</p>
-            </div>
-            <div className="raptors-card__back">
-              <h2 className="raptors-card__stats-title">Stats</h2>
-              <div className="raptors-card__stats-container">
-                <ul className="raptors-card__stats">
-                  <li className="raptors-card__stats-stat">PPG: 25.3</li>
-                  <li className="raptors-card__stats-stat">APG: 7.8</li>
-                  <li className="raptors-card__stats-stat">RPG: 7.7</li>
-                  <li className="raptors-card__stats-stat">SPG: 1</li>
-                  <li className="raptors-card__stats-stat">BPG: 2</li>
-                </ul>
-              </div>
-              <video className="raptors-card__back__video" poster controls>
-                <source src={kawhiClip}></source>
-              </video>
-              <p className="raptors-card__back__bio">
-                Gary Trent Jr. is a skilled basketball player known for his
-                scoring ability, particularly from the three-point line. He also
-                has strong defensive skills, including the ability to guard
-                multiple positions. His competitiveness and work ethic have
-                helped him develop into a valuable player on both ends of the
-                court.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="raptors-card-container">
-          <div className="raptors-card">
-            <div className="raptors-card__front">
-              <h2 className="raptors-card__front__title">Scottie Barnes</h2>
-              <img
-                className="raptors-card__image"
-                src={scottieBarnes}
-                alt="Scottie Barnes"
-              />
-              <p className="raptors-card__front__description">
-                Guard/Forward/Center, Toronto Raptors
-              </p>
-              <p className="raptors-card__front__quote">"Be great 4"</p>
-            </div>
-            <div className="raptors-card__back">
-              <h2 className="raptors-card__stats-title">Stats</h2>
-              <div className="raptors-card__stats-container">
-                <ul className="raptors-card__stats">
-                  <li className="raptors-card__stats-stat">PPG: 25.3</li>
-                  <li className="raptors-card__stats-stat">APG: 7.8</li>
-                  <li className="raptors-card__stats-stat">RPG: 7.7</li>
-                  <li className="raptors-card__stats-stat">SPG: 1</li>
-                  <li className="raptors-card__stats-stat">BPG: 2</li>
-                </ul>
-              </div>
-              <video className="raptors-card__back__video" poster controls>
-                <source src={kawhiClip}></source>
-              </video>
-              <p className="raptors-card__back__bio">
-                Scottie Barnes is a rising star in the NBA with an impressive
-                skill set, including his exceptional defensive skills,
-                playmaking abilities, and high basketball IQ. His versatility,
-                leadership skills, and strong work ethic have also contributed
-                to his success, earning him the Rookie of the Year award for the
-                2021/2022 season.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="raptors-card-container">
-          <div className="raptors-card">
-            <div className="raptors-card__front">
-              <h2 className="raptors-card__front__title">OG Anunoby</h2>
-              <img
-                className="raptors-card__image"
-                src={ogAnunoby}
-                alt="OG Anunoby"
-              />
-              <p className="raptors-card__front__description">
-                Forward, Toronto Raptors
-              </p>
-              <p className="raptors-card__front__quote">
-                "I don’t shoot trying to miss."
-              </p>
-            </div>
-            <div className="raptors-card__back">
-              <h2 className="raptors-card__stats-title">Stats</h2>
-              <div className="raptors-card__stats-container">
-                <ul className="raptors-card__stats">
-                  <li className="raptors-card__stats-stat">PPG: 25.3</li>
-                  <li className="raptors-card__stats-stat">APG: 7.8</li>
-                  <li className="raptors-card__stats-stat">RPG: 7.7</li>
-                  <li className="raptors-card__stats-stat">SPG: 1</li>
-                  <li className="raptors-card__stats-stat">BPG: 2</li>
-                </ul>
-              </div>
-              <video className="raptors-card__back__video" poster controls>
-                <source src={kawhiClip}></source>
-              </video>
-              <p className="raptors-card__back__bio">
-                OG Anunoby is a talented basketball player known for his
-                versatility and strong two-way game. He's an excellent defender
-                who can guard multiple positions, and he's also a capable scorer
-                and rebounder. His athleticism and high basketball IQ contribute
-                to his success on both ends of the court, making him a valuable
-                player for the Toronto Raptors.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="raptors-card-container">
-          <div className="raptors-card">
-            <div className="raptors-card__front">
-              <h2 className="raptors-card__front__title">Pascal Siakam</h2>
-              <img
-                className="raptors-card__image"
-                src={pascalSiakam}
-                alt="Pascal Siakam"
-              />
-              <p className="raptors-card__front__description">
-                Forward/Center, Toronto Raptors
-              </p>
-              <p className="raptors-card__front__quote">"Spicy P"</p>
-            </div>
-            <div className="raptors-card__back">
-              <h2 className="raptors-card__stats-title">Stats</h2>
-              <div className="raptors-card__stats-container">
-                <ul className="raptors-card__stats">
-                  <li className="raptors-card__stats-stat">PPG: 25.3</li>
-                  <li className="raptors-card__stats-stat">APG: 7.8</li>
-                  <li className="raptors-card__stats-stat">RPG: 7.7</li>
-                  <li className="raptors-card__stats-stat">SPG: 1</li>
-                  <li className="raptors-card__stats-stat">BPG: 2</li>
-                </ul>
-              </div>
-              <video className="raptors-card__back__video" poster controls>
-                <source src={kawhiClip}></source>
-              </video>
-              <p className="raptors-card__back__bio">
-                Pascal Siakam is a highly skilled basketball player who excels
-                in scoring, playmaking, and defense. His athleticism, work
-                ethic, and versatility have earned him recognition as an NBA
-                All-Star, NBA Champion, and NBA Most Improved Player. Siakam's
-                contributions to the Toronto Raptors have made him a valuable
-                player in the league.
-              </p>
-            </div>
-          </div>
-        </div>
-        {/* <div className="raptors-card-container">
-          <div className="raptors-card">
-            <div className="raptors-card__front">
-              <h2 className="raptors-card__front__title">Jakob Poeltl</h2>
-              <img
-                className="raptors-card__image"
-                src={jakobPoeltl}
-                alt="Jakob Poeltl"
-              />
-              <p className="raptors-card__front__description">
-                Center, Toronto Raptors
-              </p>
-              <p className="raptors-card__front__quote">"The Austrian Hammer"</p>
-            </div>
-            <div className="raptors-card__back">
-              <h2 className="raptors-card__stats-title">Stats</h2>
-              <div className="raptors-card__stats-container">
-                <ul className="raptors-card__stats">
-                  <li className="raptors-card__stats-stat">PPG: 25.3</li>
-                  <li className="raptors-card__stats-stat">APG: 7.8</li>
-                  <li className="raptors-card__stats-stat">RPG: 7.7</li>
-                  <li className="raptors-card__stats-stat">SPG: 1</li>
-                  <li className="raptors-card__stats-stat">BPG: 2</li>
-                </ul>
-              </div>
-              <video className="raptors-card__back__video" poster controls>
-                <source src={kawhiClip}></source>
-              </video>
-              <p className="raptors-card__back__bio">
-                Jakob Poeltl is a talented basketball player known for his solid
-                defensive skills, particularly as a rim protector and shot
-                blocker. He's also a strong rebounder and has shown an ability
-                to score efficiently around the basket. His high basketball IQ,
-                work ethic, and team-oriented mindset make him a valuable asset
-                to any team.
-              </p>
-            </div> */}
-        {/* </div>
-        </div> */}
+          );
+        })}
       </div>
     </section>
   );

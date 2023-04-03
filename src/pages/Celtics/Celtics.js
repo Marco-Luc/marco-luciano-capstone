@@ -6,7 +6,7 @@ import alHorford from "../../assets/Images/CelticsPlayers/alhorford2.jpg";
 import robWilliams from "../../assets/Images/CelticsPlayers/robwilliams2.jpg";
 import kawhiClip from "../../assets/Videos/RaptorsVideos/KawhiClip.mp4";
 
-function Celtics() {
+function Celtics(celticsPlayers) {
   return (
     <section className="main-section-celtics">
       <h2 className="main-section-celtics__header">Boston Celtics</h2>

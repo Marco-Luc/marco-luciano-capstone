@@ -50,9 +50,9 @@ function CelticsCard({ celticsCard }) {
                 BPG: {celticsCard.blocks}
               </li>
             </ul>
-            {/* <video className="raptors-card__back__video" poster controls>
-              <source src={kawhiClip}></source>
-            </video> */}
+            <video className="raptors-card__back__video" poster controls>
+              <source src={celticsCard.video}></source>
+            </video>
             <p className="single-celtics-card__back__bio">{celticsCard.bio}</p>
           </div>
         </div>
