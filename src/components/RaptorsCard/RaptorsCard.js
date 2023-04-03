@@ -1,7 +1,22 @@
 import "./RaptorsCard.scss";
 import fredVanvleet from "../../assets/Images/RaptorsPlayers/fvv.jpg";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 function RaptorsCard() {
+  const [raptorsCard, setRaptorsCard] = useState([]);
+
+  // useEffect(() => {
+  //   axios
+  //     .get("http://localhost:2323/players")
+  //     .then((response) => {
+  //       setRaptorsCard(response.data);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // }, []);
+
   return (
     <div className="single-raptors-card-container">
       <div className="single-raptors-card">

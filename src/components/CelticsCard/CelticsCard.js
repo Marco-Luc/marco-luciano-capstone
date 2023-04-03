@@ -1,7 +1,22 @@
 import jaysonTatum from "../../assets/Images/CelticsPlayers/jaysontatum2.jpg";
 import "./CelticsCard.scss";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 function CelticsCard() {
+  const [celticsCard, setCelticsCard] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:2323/players")
+      .then((response) => {
+        setCelticsCard(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
   return (
     <div className="single-celtics-card-container">
       <div className="single-celtics-card">
