@@ -1,7 +1,4 @@
-// import jaysonTatum from "../../assets/Images/CelticsPlayers/jaysontatum2.jpg";
 import "./CelticsCard.scss";
-import { useState, useEffect } from "react";
-import axios from "axios";
 
 function CelticsCard({ celticsCard }) {
   if (!celticsCard) {

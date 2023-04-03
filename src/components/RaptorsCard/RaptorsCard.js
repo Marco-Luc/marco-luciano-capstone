@@ -1,7 +1,4 @@
 import "./RaptorsCard.scss";
-// import fredVanvleet from "../../assets/Images/RaptorsPlayers/fvv.jpg";
-import { useState, useEffect } from "react";
-import axios from "axios";
 
 function RaptorsCard({ raptorsCard }) {
   if (!raptorsCard) {
