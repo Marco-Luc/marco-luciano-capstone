@@ -7,7 +7,7 @@ function Raptors({ raptorsPlayers }) {
     return <h1>Loading...</h1>;
   }
   return (
-    <section className="main-section-raptors">
+    <section className="main-raptors">
       <h2 className="main-section-raptors__header">Toronto Raptors</h2>
       <div className="main-raptors-section">
         {raptorsPlayers?.map((raptorsPlayer) => {
