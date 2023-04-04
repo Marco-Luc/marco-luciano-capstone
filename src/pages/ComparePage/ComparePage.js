@@ -72,9 +72,26 @@ function ComparePage({ raptorsPlayers, celticsPlayers }) {
 
   return (
     <section className="compare-page">
-      <h2 className="compare-page__header">Compare Stats</h2>
       <div className="compare-section">
-        <RaptorsCard raptorsCard={raptorsCard} />
+        <div className="home-card-container">
+          <p className="home-card-container__subtitle">HOME</p>
+          <RaptorsCard raptorsCard={raptorsCard} />
+          <select
+            className="compare-page__dropdown-menus__raptors"
+            type="text"
+            name="players"
+            // value={selectedCard}
+            placeholder="Please select"
+            onChange={handleRaptorsCard}
+          >
+            <option>Please select</option>
+            {raptorsPlayers.map((raptorsPlayer) => (
+              <option key={raptorsPlayer.id} value={raptorsPlayer.id}>
+                {raptorsPlayer.name}
+              </option>
+            ))}
+          </select>
+        </div>
         <div className="compare-section__score-card">
           <div className="compare-section__score-card-stats-list">
             <div className="compare-section__score-card-stats">
@@ -208,38 +225,24 @@ function ComparePage({ raptorsPlayers, celticsPlayers }) {
             </div>
           </div>
         </div>
-        <CelticsCard celticsCard={celticsCard} />
-      </div>
-      <div className="compare-page__dropdown-menus">
-        <select
-          className="compare-page__dropdown-menus__raptors"
-          type="text"
-          name="players"
-          // value={selectedCard}
-          placeholder="Please select"
-          onChange={handleRaptorsCard}
-        >
-          <option>Please select</option>
-          {raptorsPlayers.map((raptorsPlayer) => (
-            <option key={raptorsPlayer.id} value={raptorsPlayer.id}>
-              {raptorsPlayer.name}
-            </option>
-          ))}
-        </select>
-        <select
-          className="compare-page__dropdown-menus__celtics"
-          type="text"
-          // value={selectedCard2}
-          placeholder="Please select"
-          onChange={handleCelticsCard}
-        >
-          <option>Please select</option>
-          {celticsPlayers.map((celticsPlayer) => (
-            <option key={celticsPlayer.id} value={celticsPlayer.id}>
-              {celticsPlayer.name}
-            </option>
-          ))}
-        </select>
+        <div className="away-card-container">
+          <p className="away-card-container__subtitle">AWAY</p>
+          <CelticsCard celticsCard={celticsCard} />
+          <select
+            className="compare-page__dropdown-menus__celtics"
+            type="text"
+            // value={selectedCard2}
+            placeholder="Please select"
+            onChange={handleCelticsCard}
+          >
+            <option>Please select</option>
+            {celticsPlayers.map((celticsPlayer) => (
+              <option key={celticsPlayer.id} value={celticsPlayer.id}>
+                {celticsPlayer.name}
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
     </section>
   );
