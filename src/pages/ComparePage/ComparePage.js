@@ -241,11 +241,6 @@ function ComparePage({ raptorsPlayers, celticsPlayers }) {
           ))}
         </select>
       </div>
-      <div className="compare-page__button-section">
-        <button className="compare-page__button-section-button">
-          Compare Stats
-        </button>
-      </div>
     </section>
   );
 }
