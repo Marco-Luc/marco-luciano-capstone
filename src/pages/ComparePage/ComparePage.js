@@ -81,8 +81,10 @@ function ComparePage({ raptorsPlayers, celticsPlayers }) {
               <p className="compare-section__score-card-teams">Raptors</p>
               <p
                 className={`"compare-section__score-card-stat" ${
-                  compareStats[0].raptorsPlayerPoints >
-                    compareStats[0].celticsPlayerPoints && raptorsCard
+                  compareStats[0].raptorsPlayerPoints === 0
+                    ? "default-color"
+                    : compareStats[0].raptorsPlayerPoints >
+                        compareStats[0].celticsPlayerPoints && raptorsCard
                     ? "green"
                     : "red"
                 }`}
@@ -91,8 +93,10 @@ function ComparePage({ raptorsPlayers, celticsPlayers }) {
               </p>
               <p
                 className={`"compare-section__score-card-stat" ${
-                  compareStats[1].raptorsPlayerAssists >
-                    compareStats[1].celticsPlayerAssists && raptorsCard
+                  compareStats[1].raptorsPlayerAssists === 0
+                    ? "default-color"
+                    : compareStats[1].raptorsPlayerAssists >
+                        compareStats[1].celticsPlayerAssists && raptorsCard
                     ? "green"
                     : "red"
                 }`}
@@ -101,8 +105,10 @@ function ComparePage({ raptorsPlayers, celticsPlayers }) {
               </p>
               <p
                 className={`"compare-section__score-card-stat" ${
-                  compareStats[2].raptorsPlayerRebounds >
-                    compareStats[2].celticsPlayerRebounds && raptorsCard
+                  compareStats[2].raptorsPlayerRebounds === 0
+                    ? "default-color"
+                    : compareStats[2].raptorsPlayerRebounds >
+                        compareStats[2].celticsPlayerRebounds && raptorsCard
                     ? "green"
                     : "red"
                 }`}
@@ -111,8 +117,10 @@ function ComparePage({ raptorsPlayers, celticsPlayers }) {
               </p>
               <p
                 className={`"compare-section__score-card-stat" ${
-                  compareStats[3].raptorsPlayerSteals >
-                    compareStats[3].celticsPlayerSteals && raptorsCard
+                  compareStats[3].raptorsPlayerSteals === 0
+                    ? "default-color"
+                    : compareStats[3].raptorsPlayerSteals >
+                        compareStats[3].celticsPlayerSteals && raptorsCard
                     ? "green"
                     : "red"
                 }`}
@@ -121,8 +129,10 @@ function ComparePage({ raptorsPlayers, celticsPlayers }) {
               </p>
               <p
                 className={`"compare-section__score-card-stat" ${
-                  compareStats[4].raptorsPlayerBlocks >
-                    compareStats[4].celticsPlayerBlocks && raptorsCard
+                  compareStats[4].raptorsPlayerBlocks === 0
+                    ? "default-color"
+                    : compareStats[4].raptorsPlayerBlocks >
+                        compareStats[4].celticsPlayerBlocks && raptorsCard
                     ? "green"
                     : "red"
                 }`}
@@ -134,8 +144,10 @@ function ComparePage({ raptorsPlayers, celticsPlayers }) {
               <p className="compare-section__score-card-teams">Celtics</p>
               <p
                 className={`"compare-section__score-card-stat" ${
-                  compareStats[0].celticsPlayerPoints >
-                  compareStats[0].raptorsPlayerPoints
+                  compareStats[0].celticsPlayerPoints === 0
+                    ? "default-color"
+                    : compareStats[0].celticsPlayerPoints >
+                      compareStats[0].raptorsPlayerPoints
                     ? "green"
                     : "red"
                 }`}
@@ -144,8 +156,10 @@ function ComparePage({ raptorsPlayers, celticsPlayers }) {
               </p>
               <p
                 className={`"compare-section__score-card-stat" ${
-                  compareStats[1].celticsPlayerAssists >
-                  compareStats[1].raptorsPlayerAssists
+                  compareStats[1].celticsPlayerAssists === 0
+                    ? "default-color"
+                    : compareStats[1].celticsPlayerAssists >
+                      compareStats[1].raptorsPlayerAssists
                     ? "green"
                     : "red"
                 }`}
@@ -154,8 +168,10 @@ function ComparePage({ raptorsPlayers, celticsPlayers }) {
               </p>
               <p
                 className={`"compare-section__score-card-stat" ${
-                  compareStats[2].celticsPlayerRebounds >
-                  compareStats[2].raptorsPlayerRebounds
+                  compareStats[2].celticsPlayerRebounds === 0
+                    ? "default-color"
+                    : compareStats[2].celticsPlayerRebounds >
+                      compareStats[2].raptorsPlayerRebounds
                     ? "green"
                     : "red"
                 }`}
@@ -165,8 +181,10 @@ function ComparePage({ raptorsPlayers, celticsPlayers }) {
               </p>
               <p
                 className={`"compare-section__score-card-stat" ${
-                  compareStats[3].celticsPlayerSteals >
-                  compareStats[3].raptorsPlayerSteals
+                  compareStats[3].celticsPlayerSteals === 0
+                    ? "default-color"
+                    : compareStats[3].celticsPlayerSteals >
+                      compareStats[3].raptorsPlayerSteals
                     ? "green"
                     : "red"
                 }`}
@@ -176,8 +194,10 @@ function ComparePage({ raptorsPlayers, celticsPlayers }) {
               </p>
               <p
                 className={`"compare-section__score-card-stat" ${
-                  compareStats[4].celticsPlayerBlocks >
-                  compareStats[4].raptorsPlayerBlocks
+                  compareStats[4].celticsPlayerBlocks === 0
+                    ? "default-color"
+                    : compareStats[4].celticsPlayerBlocks >
+                      compareStats[4].raptorsPlayerBlocks
                     ? "green"
                     : "red"
                 }`}
