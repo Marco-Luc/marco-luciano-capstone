@@ -7,8 +7,38 @@
   }
 }
 
+@mixin tablet2 {
+  @media (min-width: $breakpoint-tablet2) {
+    @content;
+  }
+}
+
 @mixin desktop {
   @media (min-width: $breakpoint-desktop) {
     @content;
+  }
+}
+
+@mixin scoreCardDetails {
+  font-family: $digitalFont;
+  font-size: 1.2rem;
+  @include tablet {
+    font-size: 0.75rem;
+  }
+  @include tablet2 {
+    font-size: 1.2rem;
+  }
+}
+
+@mixin dropDownMenus {
+  font-family: $mainFont;
+  background-color: rgb(237, 237, 237);
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  width: 100%;
+  @include tablet {
+    height: 2rem;
+    width: 12rem;
   }
 }
