@@ -50,7 +50,6 @@ function ComparePage({ raptorsPlayers, celticsPlayers }) {
   };
 
   const handleCelticsCard = (event) => {
-    console.log(event.target.value);
     axios
       .get(`http://localhost:2323/players/${event.target.value}`)
       .then((response) => {
@@ -67,8 +66,6 @@ function ComparePage({ raptorsPlayers, celticsPlayers }) {
         console.log(error);
       });
   };
-
-  console.log(compareStats);
 
   return (
     <section className="compare-page">

@@ -152,6 +152,8 @@
   padding: 1rem 0.25rem;
   &__text {
     color: white;
+    display: flex;
+    justify-content: center;
   }
 }
 

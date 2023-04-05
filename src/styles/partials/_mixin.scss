@@ -42,3 +42,31 @@
     width: 12rem;
   }
 }
+
+@mixin cardContainers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__subtitle {
+    color: white;
+    font-family: $mainFont;
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+}
+
+@mixin compareButtonHover {
+  background-color: rgba(12, 4, 237, 0.878);
+  color: white;
+  border-radius: 1.875rem;
+  font-family: $mainFont;
+  font-size: 1.5rem;
+  padding: 0.3rem;
+  cursor: pointer;
+  &:hover {
+    background-color: rgba(0, 0, 65, 0.878);
+    opacity: 1;
+    transition: 0.5s;
+  }
+}

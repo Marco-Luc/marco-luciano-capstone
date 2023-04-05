@@ -10,12 +10,14 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 1rem;
   }
   &__logo {
     width: 8rem;
     height: 8rem;
     padding: 1rem;
     transition: transform 0.2s;
+    cursor: pointer;
     &:hover {
       transform: scale(1.5);
     }
@@ -23,26 +25,16 @@
 }
 
 .compare-button {
-  background-color: rgba(12, 4, 237, 0.878);
-  color: white;
   width: 100%;
-  border-radius: 1.875rem;
-  font-family: $mainFont;
-  font-size: 1.5rem;
-  padding: 0.3rem;
-  cursor: pointer;
+  margin-bottom: 1rem;
+  @include compareButtonHover;
   &__desktop-view {
     display: none;
     @include desktop {
       display: unset;
-      background-color: rgba(12, 4, 237, 0.878);
       color: white;
       width: 30rem;
-      border-radius: 1.875rem;
-      font-family: $mainFont;
-      font-size: 1.5rem;
-      padding: 0.3rem;
-      cursor: pointer;
+      @include compareButtonHover;
     }
   }
   @include tablet {
