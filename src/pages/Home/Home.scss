@@ -50,6 +50,10 @@
       justify-content: center;
     }
   }
+  &__section {
+    display: flex;
+    justify-content: center;
+  }
   &__section-desktop-view {
     display: flex;
     justify-content: center;

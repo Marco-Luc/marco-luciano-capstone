@@ -34,6 +34,7 @@
       color: white;
       padding-top: 1rem;
       font-size: 2rem;
+      font-family: $raptorsFont;
     }
     &__description {
       text-align: center;
@@ -144,16 +145,18 @@
 }
 
 .raptors-placeholder-card {
-  background-color: black;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 17.75rem;
   height: 25rem;
   position: relative;
   perspective: 62.5rem;
   padding: 1rem 0.25rem;
-  &__text {
-    color: white;
-    display: flex;
-    justify-content: center;
+  &__gif {
+    width: 10rem;
+    height: 10rem;
   }
 }
 

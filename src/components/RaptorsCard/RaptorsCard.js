@@ -1,12 +1,11 @@
 import "./RaptorsCard.scss";
+import derozan2 from "../../assets/Gifs/derozan2.gif";
 
 function RaptorsCard({ raptorsCard }) {
   if (!raptorsCard) {
     return (
       <div className="raptors-placeholder-card">
-        <p className="raptors-placeholder-card__text">
-          Please select a Raptors card
-        </p>
+        <img className="raptors-placeholder-card__gif" src={derozan2} />
       </div>
     );
   }

@@ -8,7 +8,9 @@ function Celtics({ celticsPlayers }) {
   }
   return (
     <section className="main-celtics">
-      <h2 className="main-section-celtics__header">Boston Celtics</h2>
+      <div className="main-celtics__header-container">
+        <h2 className="main-celtics__header">BOSTON CELTICS</h2>
+      </div>
       <div className="main-celtics-section">
         {celticsPlayers?.map((celticsPlayer) => {
           return (

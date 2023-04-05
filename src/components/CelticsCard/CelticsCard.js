@@ -1,12 +1,11 @@
 import "./CelticsCard.scss";
+import marcusSmartGif from "../../assets/Gifs/marcussmart.gif";
 
 function CelticsCard({ celticsCard }) {
   if (!celticsCard) {
     return (
       <div className="celtics-placeholder-card">
-        <p className="celtics-placeholder-card__text">
-          Please select a Celtics card
-        </p>
+        <img className="celtics-placeholder-card__gif" src={marcusSmartGif} />
       </div>
     );
   }

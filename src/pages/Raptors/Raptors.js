@@ -8,7 +8,9 @@ function Raptors({ raptorsPlayers }) {
   }
   return (
     <section className="main-raptors">
-      <h2 className="main-section-raptors__header">Toronto Raptors</h2>
+      <div className="main-raptors__header-container">
+        <h2 className="main-raptors__header">Toronto Raptors</h2>
+      </div>
       <div className="main-raptors-section">
         {raptorsPlayers?.map((raptorsPlayer) => {
           return (
