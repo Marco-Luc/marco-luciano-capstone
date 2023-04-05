@@ -1,6 +1,6 @@
 import "./Home.scss";
 import { NavLink } from "react-router-dom";
-
+import { useState } from "react";
 import sixersLogo from "../../assets/Logos/TeamLogosSVG/SVG-76ers.svg";
 import bucksLogo from "../../assets/Logos/TeamLogosSVG/SVG-bucks.svg";
 import bullsLogo from "../../assets/Logos/TeamLogosSVG/SVG-bulls.svg";
@@ -31,14 +31,35 @@ import thunderLogo from "../../assets/Logos/TeamLogosSVG/SVG-thunder.svg";
 import timberwolvesLogo from "../../assets/Logos/TeamLogosSVG/SVG-timberwolves.svg";
 import trailblazersLogo from "../../assets/Logos/TeamLogosSVG/SVG-trail-blazers.svg";
 import wizardsLogo from "../../assets/Logos/TeamLogosSVG/SVG-wizards.svg";
+import loadingGif from "../../assets/Gifs/derozan.gif";
 
 function Home() {
+  const [isNavigating, setIsNavigating] = useState(false);
+
+  const handleButtonClick = (event) => {
+    event.preventDefault();
+    setIsNavigating(true);
+    setTimeout(() => {
+      setIsNavigating(false);
+      window.location.href = "/comparepage";
+    }, 3800);
+  };
+
   return (
     <section className="logos-section">
       <div className="compare-button__section">
-        <NavLink to="/comparepage">
+        <NavLink to="/comparepage" onClick={handleButtonClick}>
           <button className="compare-button">Compare Stats</button>
         </NavLink>
+        {isNavigating && (
+          <div className="loading-screen">
+            <img
+              className="loading-screen__gif"
+              src={loadingGif}
+              alt="basketball player gif"
+            />
+          </div>
+        )}
       </div>
       <div className="logos-section__rows">
         <img
@@ -197,11 +218,20 @@ function Home() {
         />
       </div>
       <div className="compare-button__section-desktop-view">
-        <NavLink to="/comparepage">
+        <NavLink to="/comparepage" onClick={handleButtonClick}>
           <button className="compare-button__desktop-view">
             Compare Stats
           </button>
         </NavLink>
+        {isNavigating && (
+          <div className="loading-screen">
+            <img
+              className="loading-screen__gif"
+              src={loadingGif}
+              alt="basketball player gif"
+            />
+          </div>
+        )}
       </div>
     </section>
   );
