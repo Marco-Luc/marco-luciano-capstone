@@ -2,7 +2,7 @@
 @use "../../styles/partials/mixin" as *;
 
 .header {
-  background-color: rgba(12, 4, 237, 0.878);
+  background-color: $nbaBlue;
   width: 100%;
   &__nav {
     width: 100%;
