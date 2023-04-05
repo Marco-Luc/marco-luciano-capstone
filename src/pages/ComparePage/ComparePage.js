@@ -103,6 +103,9 @@ function ComparePage({ raptorsPlayers, celticsPlayers }) {
                     : compareStats[0].raptorsPlayerPoints >
                         compareStats[0].celticsPlayerPoints && raptorsCard
                     ? "green"
+                    : compareStats[0].raptorsPlayerPoints ===
+                      compareStats[0].celticsPlayerPoints
+                    ? "yellow"
                     : "red"
                 }`}
               >
@@ -115,6 +118,9 @@ function ComparePage({ raptorsPlayers, celticsPlayers }) {
                     : compareStats[1].raptorsPlayerAssists >
                         compareStats[1].celticsPlayerAssists && raptorsCard
                     ? "green"
+                    : compareStats[1].raptorsPlayerAssists ===
+                      compareStats[1].celticsPlayerAssists
+                    ? "yellow"
                     : "red"
                 }`}
               >
@@ -127,6 +133,9 @@ function ComparePage({ raptorsPlayers, celticsPlayers }) {
                     : compareStats[2].raptorsPlayerRebounds >
                         compareStats[2].celticsPlayerRebounds && raptorsCard
                     ? "green"
+                    : compareStats[2].raptorsPlayerRebounds ===
+                      compareStats[2].celticsPlayerRebounds
+                    ? "yellow"
                     : "red"
                 }`}
               >
@@ -139,6 +148,9 @@ function ComparePage({ raptorsPlayers, celticsPlayers }) {
                     : compareStats[3].raptorsPlayerSteals >
                         compareStats[3].celticsPlayerSteals && raptorsCard
                     ? "green"
+                    : compareStats[3].raptorsPlayerSteals ===
+                      compareStats[3].celticsPlayerSteals
+                    ? "yellow"
                     : "red"
                 }`}
               >
@@ -151,6 +163,9 @@ function ComparePage({ raptorsPlayers, celticsPlayers }) {
                     : compareStats[4].raptorsPlayerBlocks >
                         compareStats[4].celticsPlayerBlocks && raptorsCard
                     ? "green"
+                    : compareStats[4].raptorsPlayerBlocks ===
+                      compareStats[4].celticsPlayerBlocks
+                    ? "yellow"
                     : "red"
                 }`}
               >
@@ -164,8 +179,11 @@ function ComparePage({ raptorsPlayers, celticsPlayers }) {
                   compareStats[0].celticsPlayerPoints === 0
                     ? "default-color"
                     : compareStats[0].celticsPlayerPoints >
-                      compareStats[0].raptorsPlayerPoints
+                        compareStats[0].raptorsPlayerPoints && raptorsCard
                     ? "green"
+                    : compareStats[0].celticsPlayerPoints ===
+                      compareStats[0].raptorsPlayerPoints
+                    ? "yellow"
                     : "red"
                 }`}
               >
@@ -176,8 +194,11 @@ function ComparePage({ raptorsPlayers, celticsPlayers }) {
                   compareStats[1].celticsPlayerAssists === 0
                     ? "default-color"
                     : compareStats[1].celticsPlayerAssists >
-                      compareStats[1].raptorsPlayerAssists
+                        compareStats[1].raptorsPlayerAssists && raptorsCard
                     ? "green"
+                    : compareStats[1].celticsPlayerAssists ===
+                      compareStats[1].raptorsPlayerAssists
+                    ? "yellow"
                     : "red"
                 }`}
               >
@@ -188,8 +209,11 @@ function ComparePage({ raptorsPlayers, celticsPlayers }) {
                   compareStats[2].celticsPlayerRebounds === 0
                     ? "default-color"
                     : compareStats[2].celticsPlayerRebounds >
-                      compareStats[2].raptorsPlayerRebounds
+                        compareStats[2].raptorsPlayerRebounds && raptorsCard
                     ? "green"
+                    : compareStats[2].celticsPlayerRebounds ===
+                      compareStats[2].raptorsPlayerRebounds
+                    ? "yellow"
                     : "red"
                 }`}
               >
@@ -201,8 +225,11 @@ function ComparePage({ raptorsPlayers, celticsPlayers }) {
                   compareStats[3].celticsPlayerSteals === 0
                     ? "default-color"
                     : compareStats[3].celticsPlayerSteals >
-                      compareStats[3].raptorsPlayerSteals
+                        compareStats[3].raptorsPlayerSteals && raptorsCard
                     ? "green"
+                    : compareStats[3].celticsPlayerSteals ===
+                      compareStats[3].raptorsPlayerSteals
+                    ? "yellow"
                     : "red"
                 }`}
               >
@@ -214,8 +241,11 @@ function ComparePage({ raptorsPlayers, celticsPlayers }) {
                   compareStats[4].celticsPlayerBlocks === 0
                     ? "default-color"
                     : compareStats[4].celticsPlayerBlocks >
-                      compareStats[4].raptorsPlayerBlocks
+                        compareStats[4].raptorsPlayerBlocks && raptorsCard
                     ? "green"
+                    : compareStats[4].celticsPlayerBlocks ===
+                      compareStats[4].raptorsPlayerBlocks
+                    ? "yellow"
                     : "red"
                 }`}
               >
