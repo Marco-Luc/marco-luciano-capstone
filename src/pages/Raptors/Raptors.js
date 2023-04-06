@@ -55,14 +55,11 @@ function Raptors({ raptorsPlayers }) {
                       </ul>
                       <video
                         className="raptors-card__back__video"
-                        poster
-                        controls
-                      >
-                        <source
-                          src={raptorsPlayer.video}
-                          type="video/mp4"
-                        ></source>
-                      </video>
+                        type="video/mp4"
+                        src={raptorsPlayer.video}
+                        loop
+                        autoplay=""
+                      ></video>
                       <p className="raptors-card__back__bio">
                         {raptorsPlayer.bio}
                       </p>

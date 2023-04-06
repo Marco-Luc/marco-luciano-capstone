@@ -48,12 +48,13 @@ function RaptorsCard({ raptorsCard }) {
                 BPG: {raptorsCard.blocks}
               </li>
             </ul>
-            <iframe
+            <video
               className="raptors-card__back__video"
               type="video/mp4"
               src={raptorsCard.video}
               loop
-            ></iframe>
+              autoplay=""
+            ></video>
             <p className="single-raptors-card__back__bio">{raptorsCard.bio}</p>
           </div>
         </div>

@@ -3,7 +3,7 @@
 @use "../../styles/partials/mixin" as *;
 
 .logos-section {
-  padding: 1rem 2rem;
+  padding: 2rem 2rem;
   background-color: rgb(245, 245, 245);
   &__rows {
     width: 100%;
@@ -26,7 +26,7 @@
 
 .compare-button {
   width: 12rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   @include compareButtonHover;
   &__desktop-view {
     display: none;
