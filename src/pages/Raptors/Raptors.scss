@@ -2,7 +2,7 @@
 @use "../../styles/partials/mixin" as *;
 
 .main-raptors {
-  background-color: rgb(0, 0, 0);
+  background: linear-gradient(0deg, black, #bd1b21 25%, black);
   padding: 1rem 1rem;
   &__header-container {
     display: flex;

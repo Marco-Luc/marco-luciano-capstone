@@ -81,7 +81,7 @@ function ComparePage({ raptorsPlayers, celticsPlayers }) {
             placeholder="Please select"
             onChange={handleRaptorsCard}
           >
-            <option>Please select</option>
+            <option>Select a card</option>
             {raptorsPlayers.map((raptorsPlayer) => (
               <option key={raptorsPlayer.id} value={raptorsPlayer.id}>
                 {raptorsPlayer.name}
@@ -262,7 +262,7 @@ function ComparePage({ raptorsPlayers, celticsPlayers }) {
             placeholder="Please select"
             onChange={handleCelticsCard}
           >
-            <option>Please select</option>
+            <option>Select a card</option>
             {celticsPlayers.map((celticsPlayer) => (
               <option key={celticsPlayer.id} value={celticsPlayer.id}>
                 {celticsPlayer.name}

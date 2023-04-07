@@ -2,7 +2,7 @@
 @use "../../styles/partials/mixin" as *;
 
 .main-celtics {
-  background-color: black;
+  background: linear-gradient(0deg, black, rgb(0, 131, 72) 40%, black);
   padding: 1rem 1rem;
   &__header-container {
     display: flex;
