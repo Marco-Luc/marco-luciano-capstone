@@ -23,7 +23,7 @@
   font-family: $digitalFont;
   font-size: 1.2rem;
   @include tablet {
-    font-size: 0.75rem;
+    font-size: 0.9rem;
   }
   @include tablet2 {
     font-size: 1.2rem;
@@ -37,6 +37,7 @@
   border-radius: 0.25rem;
   text-align: center;
   width: 100%;
+  margin-top: 1rem;
   @include tablet {
     height: 2rem;
     width: 12rem;
@@ -52,7 +53,7 @@
     font-family: $mainFont;
     font-size: 2rem;
     margin-top: 1rem;
-    margin-bottom: 0;
+    margin-bottom: 1rem;
   }
 }
 

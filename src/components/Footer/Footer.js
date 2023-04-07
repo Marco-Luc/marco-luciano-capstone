@@ -1,5 +1,4 @@
 import "./Footer.scss";
-import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import facebookIcon from "../../assets/Icons/facebook.png";
 import instagramIcon from "../../assets/Icons/instagram.png";

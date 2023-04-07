@@ -5,7 +5,11 @@ function RaptorsCard({ raptorsCard }) {
   if (!raptorsCard) {
     return (
       <div className="raptors-placeholder-card">
-        <img className="raptors-placeholder-card__gif" src={derozan2} />
+        <img
+          className="raptors-placeholder-card__gif"
+          src={derozan2}
+          alt="Demar Derozan gif"
+        />
       </div>
     );
   }
@@ -25,7 +29,7 @@ function RaptorsCard({ raptorsCard }) {
             {raptorsCard.description}
           </p>
           <p className="single-raptors-card__front__quote">
-            {raptorsCard.quote}
+            "{raptorsCard.quote}"
           </p>
         </div>
         <div className="single-raptors-card__back">
@@ -49,7 +53,7 @@ function RaptorsCard({ raptorsCard }) {
               </li>
             </ul>
             <video
-              className="raptors-card__back__video"
+              className="single-raptors-card__back__video"
               type="video/mp4"
               src={raptorsCard.video}
               loop

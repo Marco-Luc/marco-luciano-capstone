@@ -30,7 +30,7 @@ function Raptors({ raptorsPlayers }) {
                       {raptorsPlayer.description}
                     </p>
                     <p className="raptors-card__front__quote">
-                      {raptorsPlayer.quote}
+                      "{raptorsPlayer.quote}"
                     </p>
                   </div>
                   <div className="raptors-card__back">

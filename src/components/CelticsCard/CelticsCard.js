@@ -5,7 +5,11 @@ function CelticsCard({ celticsCard }) {
   if (!celticsCard) {
     return (
       <div className="celtics-placeholder-card">
-        <img className="celtics-placeholder-card__gif" src={marcusSmartGif} />
+        <img
+          className="celtics-placeholder-card__gif"
+          src={marcusSmartGif}
+          alt="Marcus Smart gif"
+        />
       </div>
     );
   }
@@ -26,7 +30,7 @@ function CelticsCard({ celticsCard }) {
             {celticsCard.description}
           </p>
           <p className="single-celtics-card__front__quote">
-            {celticsCard.quote}
+            "{celticsCard.quote}"
           </p>
         </div>
         <div className="single-celtics-card__back">
@@ -49,9 +53,13 @@ function CelticsCard({ celticsCard }) {
                 BPG: {celticsCard.blocks}
               </li>
             </ul>
-            <video className="raptors-card__back__video" poster controls>
-              <source src={celticsCard.video}></source>
-            </video>
+            <video
+              className="single-celtics-card__back__video"
+              type="video/mp4"
+              loop
+              autoplay=""
+              src={celticsCard.video}
+            ></video>
             <p className="single-celtics-card__back__bio">{celticsCard.bio}</p>
           </div>
         </div>

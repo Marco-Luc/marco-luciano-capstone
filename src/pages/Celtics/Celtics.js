@@ -30,7 +30,7 @@ function Celtics({ celticsPlayers }) {
                       {celticsPlayer.description}
                     </p>
                     <p className="celtics-card__front__quote">
-                      {celticsPlayer.quote}
+                      "{celticsPlayer.quote}"
                     </p>
                   </div>
                   <div className="celtics-card__back">
@@ -55,14 +55,11 @@ function Celtics({ celticsPlayers }) {
                       </ul>
                       <video
                         className="celtics-card__back__video"
-                        poster
-                        controls
-                      >
-                        <source
-                          src={celticsPlayer.video}
-                          type="video/mp4"
-                        ></source>
-                      </video>
+                        type="video/mp4"
+                        src={celticsPlayer.video}
+                        loop
+                        autoplay=""
+                      ></video>
                       <p className="celtics-card__back__bio">
                         {celticsPlayer.bio}
                       </p>
