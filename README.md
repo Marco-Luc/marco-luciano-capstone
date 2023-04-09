@@ -66,7 +66,7 @@ _*Note: You will need node and npm already installed*_
 
 **Ensure you have the following dependencies in your JSON files:** `axios, react-router-dom, and sass`
 
-**If you do not have these dependencies, run** `npm i axios react-router-dom sass` **inside the frontend directory**
+**If you do not have these dependencies, run** `npm i axios react-router-dom sass` **inside the client directory**
 
 6. Start the React app:
 
