@@ -1,6 +1,6 @@
 # NBA - My Starting Five
 
-**_NBA - My Starting Five is a fun and interactive application for comparing NBA Player stats with custom-made digital NBA Player cards_**
+**_NBA - My Starting Five is a fully responsive, fun and interactive application for comparing NBA Player stats with custom-made digital NBA Player cards_**
 
 **Please note that the only pages that are available are the Toronto Raptors team page, the Boston Celtics team page, and the Compare Stats page**
 
