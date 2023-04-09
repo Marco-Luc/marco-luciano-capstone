@@ -22,7 +22,7 @@ You will need to follow these steps to run NBA - My Starting Five (locally)
 
 _*Note: You will need node and npm already installed*_
 
-####Setting up the backend
+#### Setting up the backend
 
 1. Clone or download the backend server from this repo: https://github.com/Marco-Luc/nba-my-starting-five-backend
 
@@ -34,11 +34,13 @@ _*Note: You will need node and npm already installed*_
 
    ```
 
-**Ensure you have the following dependencies in your JSON files: cors, dotenv, express and uniqid**
-**If you do not have these dependencies, run `npm i cors dotenv express uniqid` inside the server directory**
+**Ensure you have the following dependencies in your JSON files: _`cors, dotenv, express and uniqid`_**
+**If you do not have these dependencies, run _`npm i cors dotenv express uniqid`_ inside the server directory**
 
 3. Create a .env file and fill the following fields with your own values:
+
    PORT=<PORT_NUMBER>
+
    CLIENT_URL=<HOST_ADDRESS>
 
 4. Start the server:
@@ -58,8 +60,8 @@ _*Note: You will need node and npm already installed*_
 
    ```
 
-**Ensure you have the following dependencies in your JSON files: axios, react-router-dom, and sass**
-**If you do not have these dependencies, run `npm i axios react-router-dom sass` inside the server directory**
+**Ensure you have the following dependencies in your JSON files: _`axios, react-router-dom, and sass`_**
+**If you do not have these dependencies, run _`npm i axios react-router-dom sass`_ inside the server directory**
 
 6. Start the React app:
    ```bash
