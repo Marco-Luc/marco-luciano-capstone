@@ -43,7 +43,7 @@ _*Note: You will need node and npm already installed*_
    ```shell
    PORT= <PORT_NUMBER>
 
-   CLIENT_URL= <HOST_ADDRESS>
+   CLIENT_URL= <http://localhost:3000>
    ```
 
 4. Start the server:
