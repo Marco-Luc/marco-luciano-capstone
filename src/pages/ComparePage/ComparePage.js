@@ -3,7 +3,6 @@ import { useState } from "react";
 import axios from "axios";
 import RaptorsCard from "../../components/RaptorsCard/RaptorsCard";
 import CelticsCard from "../../components/CelticsCard/CelticsCard";
-import MusicPlayer from "../../components/MusicPlayer/MusicPlayer";
 
 function ComparePage({ raptorsPlayers, celticsPlayers }) {
   const [raptorsCard, setRaptorsCard] = useState(false);
@@ -30,22 +29,6 @@ function ComparePage({ raptorsPlayers, celticsPlayers }) {
       celticsPlayerBlocks: 0,
     },
   ]);
-
-  const [songs, setSongs] = useState([
-    {
-      title: "Shadow",
-      artist: "The Worst Band Ever",
-      src: "../../assets/Music/01 Shadow.m4a",
-    },
-    {
-      title: "Hiccups",
-      artist: "The Worst Band Ever",
-      src: "../../assets/Music/02Hiccups&Cigarettes.m4a",
-    },
-  ]);
-
-  const [currentSongIndex, setCurrentSongIndex] = useState(0);
-  const [nextSongIndex, setNextSongIndex] = useState(currentSongIndex + 1);
 
   const handleRaptorsCard = (event) => {
     console.log(event.target.value);
@@ -287,12 +270,6 @@ function ComparePage({ raptorsPlayers, celticsPlayers }) {
             ))}
           </select>
         </div>
-      </div>
-      <div className="compare-page__music-player">
-        <MusicPlayer
-          song={songs[currentSongIndex]}
-          nextSong={songs[nextSongIndex]}
-        />
       </div>
     </section>
   );
