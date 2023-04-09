@@ -34,18 +34,20 @@ _*Note: You will need node and npm already installed*_
 
    ```
 
-**Ensure you have the following dependencies in your JSON files: _`cors, dotenv, express and uniqid`_**
-**If you do not have these dependencies, run _`npm i cors dotenv express uniqid`_ inside the server directory**
+**Ensure you have the following dependencies in your JSON files:** `cors, dotenv, express and uniqid`
+
+**If you do not have these dependencies, run** `npm i cors dotenv express uniqid` **inside the server directory**
 
 3. Create a .env file and fill the following fields with your own values:
 
-```shell
+   ```shell
    PORT= <PORT_NUMBER>
 
    CLIENT_URL= <HOST_ADDRESS>
-```
+   ```
 
 4. Start the server:
+
    ```bash
    $ node index.js
    ```
@@ -66,6 +68,7 @@ _*Note: You will need node and npm already installed*_
 **If you do not have these dependencies, run _`npm i axios react-router-dom sass`_ inside the server directory**
 
 6. Start the React app:
+
    ```bash
    $ npm start
    ```
