@@ -96,15 +96,17 @@
     }
     &__bio {
       padding: 0rem 1rem;
-      font-size: 0.7rem;
+
       font-family: $mainFont;
       font-size: 0.8rem;
-      margin-top: 0.4rem;
+      margin-top: 9.8rem;
     }
     &__video {
       width: 100%;
       height: 9rem;
       aspect-ratio: 16 / 9;
+      position: absolute;
+      z-index: 5;
     }
   }
   &__image {
@@ -149,7 +151,7 @@
 .celtics-card__back:before,
 .celtics-card__back:after {
   content: "";
-  // position: absolute;
+  position: absolute;
   left: 0;
   right: 0;
   top: 0;
