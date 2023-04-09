@@ -22,16 +22,7 @@
 }
 
 .raptors-card {
-  @include allCards;
-  &__front {
-    background-color: rgb(117, 59, 189);
-    &__title {
-      font-family: $raptorsFont;
-    }
-  }
-  &__back {
-    background-color: rgb(189, 27, 33);
-  }
+  @include allRaptorsCards;
 }
 
 .raptors-cards__card-flip--active {
@@ -42,14 +33,7 @@
 .raptors-card__front:after,
 .raptors-card__back:before,
 .raptors-card__back:after {
-  @include allCardsBackgroundColor;
-  background-image: linear-gradient(
-    115deg,
-    transparent 0%,
-    rgb(117, 59, 189) 30%,
-    rgb(180, 151, 90) 70%,
-    transparent 20%
-  );
+  @include allRaptorsCardsBackgroundColor;
 }
 
 .raptors-card__front:after,

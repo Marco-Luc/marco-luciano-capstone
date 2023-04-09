@@ -51,6 +51,8 @@
   justify-content: space-around;
 }
 
+// Cards below
+
 @mixin cardContainers {
   perspective: 62.5rem;
   padding: 1rem 0.25rem;
@@ -153,6 +155,32 @@
   }
 }
 
+@mixin allRaptorsCards {
+  @include allCards;
+  &__front {
+    background-color: rgb(117, 59, 189);
+    &__title {
+      font-family: $raptorsFont;
+    }
+  }
+  &__back {
+    background-color: rgb(189, 27, 33);
+  }
+}
+
+@mixin allCelticsCards {
+  @include allCards;
+  &__front {
+    background-color: rgb(0, 131, 72);
+    &__title {
+      font-family: $celticsFont;
+    }
+  }
+  &__back {
+    background-color: rgb(0, 131, 72);
+  }
+}
+
 @mixin allCardsActive {
   transform: rotateY(180deg);
 }
@@ -179,6 +207,28 @@
   opacity: 0.2;
   z-index: 1;
   animation: holoGradient 5s ease infinite;
+}
+
+@mixin allRaptorsCardsBackgroundColor {
+  @include allCardsBackgroundColor;
+  background-image: linear-gradient(
+    115deg,
+    transparent 0%,
+    rgb(117, 59, 189) 30%,
+    rgb(180, 151, 90) 70%,
+    transparent 20%
+  );
+}
+
+@mixin allCelticsCardsBackgroundColor {
+  @include allCardsBackgroundColor;
+  background-image: linear-gradient(
+    115deg,
+    transparent 0%,
+    rgb(0, 131, 72) 30%,
+    rgb(0, 131, 72) 70%,
+    transparent 20%
+  );
 }
 
 @mixin allCardsSparkle {
@@ -246,5 +296,21 @@
     background-color: rgba(255, 166, 0, 0.95);
     opacity: 1;
     transition: 0.5s;
+  }
+}
+
+@mixin placeholderCards {
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 17.75rem;
+  height: 25rem;
+  position: relative;
+  perspective: 62.5rem;
+  padding: 1rem 0.25rem;
+  &__gif {
+    width: 10rem;
+    height: 10rem;
   }
 }

@@ -22,16 +22,7 @@
 }
 
 .celtics-card {
-  @include allCards;
-  &__front {
-    background-color: rgb(0, 131, 72);
-    &__title {
-      font-family: $celticsFont;
-    }
-  }
-  &__back {
-    background-color: rgb(0, 131, 72);
-  }
+  @include allCelticsCards;
 }
 
 .celtics-cards__card-flip--active {
@@ -42,14 +33,7 @@
 .celtics-card__front:after,
 .celtics-card__back:before,
 .celtics-card__back:after {
-  @include allCardsBackgroundColor;
-  background-image: linear-gradient(
-    115deg,
-    transparent 0%,
-    rgb(0, 131, 72) 30%,
-    rgb(0, 131, 72) 70%,
-    transparent 20%
-  );
+  @include allCelticsCardsBackgroundColor;
 }
 
 .celtics-card__front:after,
