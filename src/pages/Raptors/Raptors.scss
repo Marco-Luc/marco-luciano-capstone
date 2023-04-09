@@ -99,6 +99,7 @@
       width: 100%;
       height: 9rem;
       aspect-ratio: 16 / 9;
+      z-index: 5;
     }
   }
   &__image {
@@ -143,7 +144,7 @@
 .raptors-card__back:before,
 .raptors-card__back:after {
   content: "";
-  position: absolute;
+  // position: absolute;
   left: 0;
   right: 0;
   top: 0;
