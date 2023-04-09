@@ -52,7 +52,7 @@ _*Note: You will need node and npm already installed*_
    $ node index.js
    ```
 
-#### Set up the frontend
+#### Setting up the frontend
 
 5. Clone or download the frontend server from this repo: https://github.com/Marco-Luc/nba-my-starting-five
 
@@ -64,8 +64,9 @@ _*Note: You will need node and npm already installed*_
 
    ```
 
-**Ensure you have the following dependencies in your JSON files: _`axios, react-router-dom, and sass`_**
-**If you do not have these dependencies, run _`npm i axios react-router-dom sass`_ inside the server directory**
+**Ensure you have the following dependencies in your JSON files:** `axios, react-router-dom, and sass`
+
+**If you do not have these dependencies, run** `npm i axios react-router-dom sass` **inside the server directory**
 
 6. Start the React app:
 
