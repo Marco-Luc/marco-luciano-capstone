@@ -2,153 +2,47 @@
 @use "../../styles/partials/mixin" as *;
 
 .main-raptors {
+  @include mainCardPages;
   background: linear-gradient(0deg, black, #bd1b21 25%, black);
-  padding: 1rem 1rem;
-  &__header-container {
-    display: flex;
-    justify-content: center;
-  }
   &__header {
-    color: white;
-    display: flex;
-    justify-content: center;
-    text-align: center;
     font-family: $raptorsFont;
-    font-size: 5rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
   }
 }
 
 .main-raptors-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  @include mainCardSections;
 }
 
 .raptors-card-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  @include teamCardSections;
 }
 
 .raptors-card-container {
-  perspective: 62.5rem;
-  padding: 1rem 0.25rem;
+  @include cardContainers;
 }
 
 .raptors-card {
-  width: 17.75rem;
-  height: 25rem;
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform 1s;
-  &:hover {
-    transform: rotateY(180deg);
-  }
-  &__front,
-  &__back {
-    position: absolute;
-    border: rgb(255, 255, 255) 0.25rem solid;
-    width: 100%;
-    height: 100%;
-    border-radius: 1.875rem;
-    backface-visibility: hidden;
-    // background-image: url(../../assets/Gifs/sparkles.gif);
-    background-blend-mode: screen;
-    opacity: 0.9;
-  }
+  @include allCards;
   &__front {
     background-color: rgb(117, 59, 189);
     &__title {
-      text-align: center;
-      color: white;
-      padding-top: 1rem;
-      font-size: 2rem;
       font-family: $raptorsFont;
-    }
-    &__description {
-      text-align: center;
-      font-family: $mainFont;
-      color: white;
-      font-size: 1rem;
-    }
-    &__quote {
-      text-align: center;
-      font-family: $mainFont;
-      color: white;
-      font-size: 1.5rem;
     }
   }
   &__back {
     background-color: rgb(189, 27, 33);
-    color: white;
-    transform: rotateY(180deg);
-    &__title {
-      text-align: center;
-      padding-top: 1rem;
-    }
-    &__bio {
-      padding: 0rem 1rem;
-      font-family: $mainFont;
-      font-size: 0.8rem;
-      margin-top: 9.8rem;
-    }
-    &__video {
-      width: 100%;
-      height: 9rem;
-      aspect-ratio: 16 / 9;
-      position: absolute;
-      z-index: 5;
-    }
-  }
-  &__image {
-    display: block;
-    margin: 1.25rem auto;
-    width: 12.5rem;
-    height: 12.5rem;
-    object-fit: cover;
-    border: rgb(0, 0, 0) solid 0.1rem;
-    border-radius: 1.875rem;
-    z-index: 2;
-  }
-  &__stats-title {
-    text-align: center;
-    font-size: 1.3rem;
-    padding-top: 1rem;
-  }
-  &__stats-container {
-    width: 100%;
-    padding-top: 0.5rem;
-  }
-  &__stats {
-    list-style: none;
-    padding: 0;
-    font-size: 1rem;
-    display: flex;
-    flex-direction: row;
-  }
-  &__stats-stat {
-    font-size: 0.8rem;
-    padding-left: 1rem;
-    padding-bottom: 1rem;
   }
 }
 
 .raptors-cards__card-flip--active {
-  transform: rotateY(180deg);
+  @include allCardsActive;
 }
 
 .raptors-card__front:before,
 .raptors-card__front:after,
 .raptors-card__back:before,
 .raptors-card__back:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
+  @include allCardsBackgroundColor;
   background-image: linear-gradient(
     115deg,
     transparent 0%,
@@ -156,24 +50,11 @@
     rgb(180, 151, 90) 70%,
     transparent 20%
   );
-  background-position: 0% 0%;
-  background-repeat: no-repeat;
-  border-radius: 1.875rem;
-  background-size: 300% 300%;
-  mix-blend-mode: color-dodge;
-  opacity: 0.2;
-  z-index: 1;
-  animation: holoGradient 5s ease infinite;
 }
 
 .raptors-card__front:after,
 .raptors-card__back:after {
-  background-image: url("../../assets/Gifs/sparkles.gif");
-  background-size: 100%;
-  mix-blend-mode: color-dodge;
-  opacity: 0.1;
-  z-index: 2;
-  animation: holoSparkle 10s ease infinite;
+  @include allCardsSparkle;
 }
 
 @keyframes holoSparkle {
@@ -221,3 +102,100 @@
     opacity: 0;
   }
 }
+
+// .raptors-card {
+//   width: 17.75rem;
+//   height: 25rem;
+//   position: relative;
+//   transform-style: preserve-3d;
+//   transition: transform 1s;
+//   &:hover {
+//     transform: rotateY(180deg);
+//   }
+//   &__front,
+//   &__back {
+//     position: absolute;
+//     border: rgb(255, 255, 255) 0.25rem solid;
+//     width: 100%;
+//     height: 100%;
+//     border-radius: 1.875rem;
+//     backface-visibility: hidden;
+//     background-blend-mode: screen;
+//     opacity: 0.9;
+//   }
+//   &__front {
+//     background-color: rgb(117, 59, 189);
+//     &__title {
+//       text-align: center;
+//       color: white;
+//       padding-top: 1rem;
+//       font-size: 2rem;
+//       font-family: $raptorsFont;
+//     }
+//     &__description {
+//       text-align: center;
+//       font-family: $mainFont;
+//       color: white;
+//       font-size: 1rem;
+//     }
+//     &__quote {
+//       text-align: center;
+//       font-family: $mainFont;
+//       color: white;
+//       font-size: 1.5rem;
+//     }
+//   }
+//   &__back {
+//     background-color: rgb(189, 27, 33);
+//     color: white;
+//     transform: rotateY(180deg);
+//     &__title {
+//       text-align: center;
+//       padding-top: 1rem;
+//     }
+//     &__bio {
+//       padding: 0rem 1rem;
+//       font-family: $mainFont;
+//       font-size: 0.8rem;
+//       margin-top: 9.8rem;
+//     }
+//     &__video {
+//       width: 100%;
+//       height: 9rem;
+//       aspect-ratio: 16 / 9;
+//       position: absolute;
+//       z-index: 5;
+//     }
+//   }
+//   &__image {
+//     display: block;
+//     margin: 1.25rem auto;
+//     width: 12.5rem;
+//     height: 12.5rem;
+//     object-fit: cover;
+//     border: rgb(0, 0, 0) solid 0.1rem;
+//     border-radius: 1.875rem;
+//     z-index: 2;
+//   }
+//   &__stats-title {
+//     text-align: center;
+//     font-size: 1.3rem;
+//     padding-top: 1rem;
+//   }
+//   &__stats-container {
+//     width: 100%;
+//     padding-top: 0.5rem;
+//   }
+//   &__stats {
+//     list-style: none;
+//     padding: 0;
+//     font-size: 1rem;
+//     display: flex;
+//     flex-direction: row;
+//   }
+//   &__stats-stat {
+//     font-size: 0.8rem;
+//     padding-left: 1rem;
+//     padding-bottom: 1rem;
+//   }
+// }

@@ -27,11 +27,11 @@
 }
 
 .away-card-container {
-  @include cardContainers;
+  @include compareCardContainers;
 }
 
 .home-card-container {
-  @include cardContainers;
+  @include compareCardContainers;
 }
 
 .compare-section {
