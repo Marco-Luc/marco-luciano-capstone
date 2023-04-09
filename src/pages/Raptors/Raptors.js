@@ -55,7 +55,6 @@ function Raptors({ raptorsPlayers }) {
                         className="raptors-card__back__video"
                         type="video/mp4"
                         src={raptorsPlayer.video}
-                        poster
                         controls
                         loop
                       ></video>

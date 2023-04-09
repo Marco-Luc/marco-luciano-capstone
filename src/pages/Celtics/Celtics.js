@@ -55,7 +55,6 @@ function Celtics({ celticsPlayers }) {
                         className="celtics-card__back__video"
                         type="video/mp4"
                         src={celticsPlayer.video}
-                        poster
                         controls
                         loop
                       ></video>
