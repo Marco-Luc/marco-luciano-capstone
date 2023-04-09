@@ -2,7 +2,7 @@
 
 **_NBA - My Starting Five is a fully responsive, fun and interactive application for comparing NBA Player stats with custom-made digital NBA Player cards_**
 
-**Please note that the only pages that are available are the Toronto Raptors team page, the Boston Celtics team page, and the Compare Stats page**
+**---Please note that the only pages that are available are the Toronto Raptors team page, the Boston Celtics team page, and the Compare Stats page---**
 
 This is my capstone project for BrainStation's full-stack bootcamp. Students were tasked to create their very own full-stack application within a two week time frame.
 
@@ -72,3 +72,5 @@ _*Note: You will need node and npm already installed*_
    ```bash
    $ npm start
    ```
+
+7. Enjoy 😎
