@@ -39,9 +39,11 @@ _*Note: You will need node and npm already installed*_
 
 3. Create a .env file and fill the following fields with your own values:
 
-   PORT=<PORT_NUMBER>
+```shell
+   PORT= <PORT_NUMBER>
 
-   CLIENT_URL=<HOST_ADDRESS>
+   CLIENT_URL= <HOST_ADDRESS>
+```
 
 4. Start the server:
    ```bash
