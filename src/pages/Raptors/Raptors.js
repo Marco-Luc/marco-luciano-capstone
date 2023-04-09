@@ -1,8 +1,6 @@
 import "./Raptors.scss";
 
 function Raptors({ raptorsPlayers }) {
-  console.log(raptorsPlayers);
-
   if (!raptorsPlayers) {
     return <h1>Loading...</h1>;
   }

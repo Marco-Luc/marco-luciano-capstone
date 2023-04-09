@@ -31,7 +31,6 @@ function ComparePage({ raptorsPlayers, celticsPlayers }) {
   ]);
 
   const handleRaptorsCard = (event) => {
-    console.log(event.target.value);
     axios
       .get(`http://localhost:2323/players/${event.target.value}`)
       .then((response) => {
@@ -276,30 +275,3 @@ function ComparePage({ raptorsPlayers, celticsPlayers }) {
 }
 
 export default ComparePage;
-
-//Step 1:
-
-//pass down info I need from this call to the card components as props
-// for the dropdown: we'll need to filter through the array to get data for
-// the drop down menu - this would just be the names of the players
-// split the array into two (raptors players and celtics)
-
-//Step 2: (reliant on something being selected in dropdown menu)
-
-//find object where it matches the selected drop down, store that in
-// selectedraptorsplayer
-//selected raptors = response.data (this is the entire array)
-//then use .find where for each card
-//card.name === the prop that is passed through from the dropdown menu
-//that should return the single object from the array
-//that is now selectedRaptors player
-//in return - selectedRaptorsPlayer.name, .description, etc
-// filter through the array to grab the specific raptors players, from there I can pass
-// player.name, player.description to components.
-// pass down this entire object to my card component - from there, in the component I would destructure it and have access
-// to all the key value pairs
-
-//Displaying the card :
-// Shouldnt need to use state for selectedCard and setSelectedCard , variables are better. get these from step 2
-// card 1 should be raptors card and card 2 is celtics card.
-// Will need to do step 2 twice - once for the raptors and once for the celtics

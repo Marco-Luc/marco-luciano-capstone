@@ -1,8 +1,6 @@
 import "./Celtics.scss";
 
 function Celtics({ celticsPlayers }) {
-  console.log(celticsPlayers);
-
   if (!celticsPlayers) {
     return <h1>Loading...</h1>;
   }
