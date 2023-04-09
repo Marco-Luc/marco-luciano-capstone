@@ -25,5 +25,9 @@
     padding: 1rem 1rem 1rem 1rem;
     width: 7rem;
     height: 9rem;
+    transition: transform 0.2s;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 }

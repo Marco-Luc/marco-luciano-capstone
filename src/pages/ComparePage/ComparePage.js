@@ -71,7 +71,7 @@ function ComparePage({ raptorsPlayers, celticsPlayers }) {
     <section className="compare-page">
       <div className="compare-section">
         <div className="home-card-container">
-          <p className="home-card-container__subtitle">HOME</p>
+          <p className="home-card-container__subtitle">TORONTO</p>
           <RaptorsCard raptorsCard={raptorsCard} />
           <select
             className="compare-page__dropdown-menus__raptors"
@@ -92,7 +92,7 @@ function ComparePage({ raptorsPlayers, celticsPlayers }) {
         <div className="compare-section__score-card">
           <div className="compare-section__score-card-stats-list">
             <div className="compare-section__score-card-stats">
-              <p className="compare-section__score-card-teams">Raptors</p>
+              <p className="compare-section__score-card-teams">RAPTORS</p>
               <p
                 className={`"compare-section__score-card-stat" ${
                   compareStats[0].raptorsPlayerPoints === 0
@@ -170,7 +170,7 @@ function ComparePage({ raptorsPlayers, celticsPlayers }) {
               </p>
             </div>
             <div className="compare-section__score-card-stats">
-              <p className="compare-section__score-card-teams">Celtics</p>
+              <p className="compare-section__score-card-teams">CELTICS</p>
               <p
                 className={`"compare-section__score-card-stat" ${
                   compareStats[0].celticsPlayerPoints === 0
@@ -253,7 +253,7 @@ function ComparePage({ raptorsPlayers, celticsPlayers }) {
           </div>
         </div>
         <div className="away-card-container">
-          <p className="away-card-container__subtitle">AWAY</p>
+          <p className="away-card-container__subtitle">BOSTON</p>
           <CelticsCard celticsCard={celticsCard} />
           <select
             className="compare-page__dropdown-menus__celtics"
