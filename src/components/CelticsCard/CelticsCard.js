@@ -57,7 +57,7 @@ function CelticsCard({ celticsCard }) {
               className="single-celtics-card__back__video"
               type="video/mp4"
               loop
-              autoplay=""
+              autoPlay={true}
               src={celticsCard.video}
             ></video>
             <p className="single-celtics-card__back__bio">{celticsCard.bio}</p>

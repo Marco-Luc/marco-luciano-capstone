@@ -57,7 +57,7 @@ function RaptorsCard({ raptorsCard }) {
               type="video/mp4"
               src={raptorsCard.video}
               loop
-              autoplay=""
+              autoPlay={true}
             ></video>
             <p className="single-raptors-card__back__bio">{raptorsCard.bio}</p>
           </div>

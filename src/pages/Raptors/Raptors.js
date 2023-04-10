@@ -12,7 +12,7 @@ function Raptors({ raptorsPlayers }) {
       <div className="main-raptors-section">
         {raptorsPlayers?.map((raptorsPlayer) => {
           return (
-            <div className="raptors-card-section">
+            <div key={raptorsPlayer.id} className="raptors-card-section">
               <div className="raptors-card-container">
                 <div className="raptors-card">
                   <div className="raptors-card__front">

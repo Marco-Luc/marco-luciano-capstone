@@ -12,7 +12,7 @@ function Celtics({ celticsPlayers }) {
       <div className="main-celtics-section">
         {celticsPlayers?.map((celticsPlayer) => {
           return (
-            <div className="celtics-card-section">
+            <div key={celticsPlayer.id} className="celtics-card-section">
               <div className="celtics-card-container">
                 <div className="celtics-card">
                   <div className="celtics-card__front">
