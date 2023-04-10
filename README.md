@@ -6,9 +6,22 @@
 
 This is my capstone project for BrainStation's full-stack bootcamp. Students were tasked to create their very own full-stack application within a two week time frame.
 
-NBA - My Starting Five was made using create-react-app, react-router and SASS for the front end.
+# Tech Stack
 
-I used Node/Express to create a backend API with data I retrieved myself.
+## Frontend:
+
+- **React**
+- **React Router**
+- **SASS**
+
+## Backend:
+
+- **Node**
+- **Express**
+
+I used Node/Express to create the backend API with NBA team/player data I retrieved myself.
+
+On both sides, **Axios** was used for making requests between the client and server. **npm** was used to manage the various dependencies required throughout the project.
 
 🏀 Thank you for checking out my application, I hope you have fun! 🏀
 
@@ -24,7 +37,7 @@ _*Note: You will need node and npm already installed*_
 
 #### Setting up the backend
 
-1. Clone or download the backend server from this repo: https://github.com/Marco-Luc/nba-my-starting-five-backend
+1. Clone or download the backend server from this repo: [NBA - My Starting Five Backend Server](https://github.com/Marco-Luc/nba-my-starting-five-backend)
 
 2. Run `npm install` from inside the backend server directory.
 
@@ -50,7 +63,7 @@ _*Note: You will need node and npm already installed*_
 
 #### Setting up the frontend
 
-5. Clone or download the frontend server from this repo: https://github.com/Marco-Luc/nba-my-starting-five
+5. Clone or download the frontend server from this repo: [NBA - My Starting Five] (https://github.com/Marco-Luc/nba-my-starting-five)
 
 6. Run `npm install` from inside the client directory.
 
@@ -67,3 +80,10 @@ _*Note: You will need node and npm already installed*_
    ```
 
 8. Enjoy 😎
+
+# Contact
+
+If you'd like to get in contact with me to learn more about NBA - My Starting Five, please don't hesitate to reach out!
+
+Email: [marco.luci95@gmail.com](mailto:marco.luci95@gmail.com)\
+LinkedIn: https://www.linkedin.com/in/marco-luciano/
