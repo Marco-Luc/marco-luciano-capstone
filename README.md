@@ -8,13 +8,13 @@ This is my capstone project for BrainStation's full-stack bootcamp. Students wer
 
 # Tech Stack
 
-## Frontend:
+## Frontend
 
 - **React**
 - **React Router**
 - **SASS**
 
-## Backend:
+## Backend
 
 - **Node**
 - **Express**
