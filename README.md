@@ -21,11 +21,11 @@ This is my capstone project for BrainStation's full-stack bootcamp. Students wer
 
 I used Node/Express to create the backend API with NBA team/player data I retrieved myself.
 
-On both sides, **Axios** was used for making requests between the client and server. **npm** was used to manage the various dependencies required throughout the project.
+On both sides, **Axios** was used for making requests between the client and server. **npm** was used to manage the dependencies required throughout the project.
 
 🏀 Thank you for checking out my application, I hope you have fun! 🏀
 
--- Marco Luciano (April, 2023)
+— Marco Luciano (April, 2023)
 
 ![Screenshot of NBA - My Starting Five App](./src/assets/Images/app-screenshot.png)
 
@@ -37,7 +37,7 @@ _*Note: You will need node and npm already installed*_
 
 #### Setting up the backend
 
-1. Clone or download the backend server from this repo: [NBA - My Starting Five Backend Server](https://github.com/Marco-Luc/nba-my-starting-five-backend)
+1. Clone or download the backend server from this repo: [nba-my-starting-five-backend](https://github.com/Marco-Luc/nba-my-starting-five-backend)
 
 2. Run `npm install` from inside the backend server directory.
 
@@ -63,7 +63,7 @@ _*Note: You will need node and npm already installed*_
 
 #### Setting up the frontend
 
-5. Clone or download the frontend server from this repo: [NBA - My Starting Five] (https://github.com/Marco-Luc/nba-my-starting-five)
+5. Clone or download the frontend server from this repo: [nba-my-starting-five](https://github.com/Marco-Luc/nba-my-starting-five)
 
 6. Run `npm install` from inside the client directory.
 
