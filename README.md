@@ -8,9 +8,10 @@ This is my capstone project for BrainStation's full-stack bootcamp. Students wer
 
 Watch the video of my demo **<a href="https://youtu.be/k2X_2czoUWc" target="_blank">here</a>**:
 
-<div style="display: flex; justify-content: center;">
-[![Video Preview](http://img.youtube.com/vi/k2X_2czoUWc/0.jpg)](http://www.youtube.com/watch?v=k2X_2czoUWc "Marco Luciano - NBA My Starting Five (April 2023)")
+<div align="center">
+  [![Video Preview](http://img.youtube.com/vi/k2X_2czoUWc/0.jpg)](http://www.youtube.com/watch?v=k2X_2czoUWc "Marco Luciano - NBA My Starting Five (April 2023)")
 </div>
+
 
 # Tech Stack
 
