@@ -6,9 +6,9 @@
 
 This is my capstone project for BrainStation's full-stack bootcamp. Students were tasked to create their very own full-stack application within a two week time frame.
 
-Watch the video of my demo **<a href="https://youtu.be/k2X_2czoUWc" target="_blank">here</a>**.
+Watch the video of my demo **<a href="https://youtu.be/k2X_2czoUWc" target="_blank">here</a>**:
 
-[![Video Preview](http://img.youtube.com/vi/k2X_2czoUWc/0.jpg)](http://www.youtube.com/watch?v=k2X_2czoUWc "Marco Luciano - NBA My Starting Five (April 2023)")
+:[![Video Preview](http://img.youtube.com/vi/k2X_2czoUWc/0.jpg)](http://www.youtube.com/watch?v=k2X_2czoUWc "Marco Luciano - NBA My Starting Five (April 2023)"):
 
 # Tech Stack
 
